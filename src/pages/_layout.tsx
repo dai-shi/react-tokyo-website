@@ -9,7 +9,7 @@ type RootLayoutProps = { children: ReactNode };
 
 const meta = {
   title: 'React Tokyo',
-  description: 'One of the React community based on Tokyo',
+  description: 'A React community in Tokyo',
   icon: '/images/favicon.png',
 };
 
