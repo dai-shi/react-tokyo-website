@@ -1,32 +1,27 @@
-import { Link } from 'waku';
-
-import { Counter } from '../components/counter';
+const meta = {
+  title: 'React Tokyo',
+};
 
 export default async function HomePage() {
-  const data = await getData();
-
   return (
     <div>
-      <title>{data.title}</title>
-      <h1 className="text-4xl font-bold tracking-tight">{data.headline}</h1>
-      <p>{data.body}</p>
-      <Counter />
-      <Link to="/about" className="mt-4 inline-block underline">
-        About page
-      </Link>
+      <title>{meta.title}</title>
+      <div className="grid grid-rows-3 lg:grid-cols-3 lg:grid-flow-row gap-8">
+        <div className="lg:col-span-2 flex flex-col items-center justify-center">
+          <h1 className="text-4xl font-bold tracking-tight">We are React Tokyo Community</h1>
+        </div>
+        <div className="lg:row-span-3 flex items-center justify-center">
+          <div className="w-40 lg:w-80 rounded-full bg-[#F45554]">
+            <img src="/images/react-tokyo-logo.png" alt="react tokyo logo" />
+          </div>
+        </div>
+        <div className="lg:row-span-2 lg:col-span-2 flex flex-col items-center justify-center">
+          Join us!!
+        </div>
+      </div>
     </div>
   );
 }
-
-const getData = async () => {
-  const data = {
-    title: 'React Tokyo',
-    headline: 'React Tokyo',
-    body: 'Welcome to React Tokyo!',
-  };
-
-  return data;
-};
 
 export const getConfig = async () => {
   return {
