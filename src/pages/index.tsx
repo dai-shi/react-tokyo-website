@@ -1,3 +1,5 @@
+import { JoinDiscordServer } from '../components/joinDiscordServer';
+
 const meta = {
   title: 'React Tokyo',
 };
@@ -6,8 +8,8 @@ export default async function HomePage() {
   return (
     <div>
       <title>{meta.title}</title>
-      <div className="grid grid-rows-3 lg:grid-cols-3 lg:grid-flow-row gap-8">
-        <div className="lg:col-span-2 flex flex-col items-center justify-center">
+      <div className="grid grid-rows-3 lg:grid-cols-3 lg:grid-flow-row gap-y-2 gap-x-8">
+        <div className="lg:col-span-2 flex flex-col items-start justify-center">
           <h1 className="text-4xl font-bold tracking-tight">We are React Tokyo Community</h1>
         </div>
         <div className="lg:row-span-3 flex items-center justify-center">
@@ -15,8 +17,16 @@ export default async function HomePage() {
             <img src="/images/react-tokyo-logo.png" alt="react tokyo logo" />
           </div>
         </div>
-        <div className="lg:row-span-2 lg:col-span-2 flex flex-col items-center justify-center">
-          Join us!!
+        <div className="lg:row-span-2 lg:col-span-2 flex flex-col items-start justify-center gap-8">
+          <div>
+            <p>東京を中心としたReactのオンライン＆オフラインコミュニティです。</p>
+            <p>
+              オンラインでは、Discordを交流の場として活動し、オフラインでは、Reactのイベントを開催します。
+            </p>
+          </div>
+          <div>
+            <JoinDiscordServer />
+          </div>
         </div>
       </div>
     </div>
