@@ -20,7 +20,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       <meta name="description" content={meta.description} />
       <link rel="icon" type="image/png" href={meta.icon} />
       <Header />
-      <main className="m-6 flex items-center justify-center *:min-h-64 *:min-w-64 lg:m-0 lg:min-h-svh">
+      <main className="m-6 flex items-center justify-center *:min-h-64 *:min-w-64 lg:m-0 lg:min-h-svh lg:pb-20">
         {children}
       </main>
       <Footer />
