@@ -4,7 +4,7 @@ import { JoinDiscordServer } from '../components/joinDiscordServer';
 export default async function HomePage() {
   return (
     <div>
-      <Head title='React Tokyo' />
+      <Head />
       <div className="grid grid-rows-3 lg:grid-cols-3 lg:grid-flow-row gap-y-2 gap-x-8">
         <div className="lg:col-span-2 flex flex-col items-start justify-center">
           <h1 className="text-4xl font-bold tracking-tight">We are React Tokyo Community</h1>
