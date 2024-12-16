@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
-    <footer className="p-6 lg:fixed lg:bottom-0 lg:left-0">
-      <div className="flex flex-row space-x-3">
+    <footer className="p-6 lg:fixed lg:bottom-0 lg:right-0">
+      <div className="flex flex-row justify-end space-x-3">
         <a href="https://discord.gg/5B9jYpABUy" target="_blank" rel="noreferrer">
           <img className="h-5" src="/images/discord-logo.png" alt="Discord logo" />
         </a>

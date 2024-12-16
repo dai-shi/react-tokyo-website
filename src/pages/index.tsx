@@ -1,5 +1,6 @@
 import { Head } from '../components/head';
 import { JoinDiscordServer } from '../components/joinDiscordServer';
+import { Faq } from '../components/faq';
 
 const descriptions = [
   '東京を中心に、オンラインとオフラインの両方で活動するReactコミュニティです。',
@@ -11,7 +12,7 @@ const descriptions = [
 
 export default async function HomePage() {
   return (
-    <div>
+    <div className="space-y-10 lg:pt-40">
       <Head />
       <div className="grid grid-rows-[auto_auto_auto] lg:grid-cols-3 lg:grid-flow-row gap-y-2 gap-x-8">
         <div className="order-1 lg:order-2 lg:row-span-3 flex items-center justify-center">
@@ -33,12 +34,13 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
+      <Faq />
     </div>
   );
 }
 
 export const getConfig = async () => {
   return {
-    render: 'static',
+    render: "static",
   } as const;
 };
