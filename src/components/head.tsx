@@ -15,7 +15,7 @@ const DEFAULT_META_DATA: MetaData = {
 /**
  * ページのメタデータ設定用のコンポーネント
  */
-export const Head: FC<Partial<MetaData>> = (metaProps) => {
+export const Head = (metaProps: Partial<MetaData>) => {
   const meta: MetaData = {
     ...DEFAULT_META_DATA,
     ...metaProps,
