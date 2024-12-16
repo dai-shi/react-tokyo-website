@@ -7,7 +7,6 @@ type MetaData = {
 const DEFAULT_META_DATA: MetaData = {
   title: "React Tokyo",
   description: "A React community in Tokyo",
-
   icon: "/images/favicon.png",
 };
 
