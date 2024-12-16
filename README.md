@@ -4,26 +4,38 @@
   <img width="200" src="./public/images/react-tokyo-logo.png">
 </div>
 
-## How to use
+## 動かし方
 
 - setUp `pnpm`
 
-- install
+- インストール
 
   ```bash
   pnpm install
   ```
 
-- build 
+- フロントエンドのビルド
 
   ```bash
   pnpm run build
   ```
 
-- start
+- フロントエンドの起動
 
   ```bash
   pnpm run dev
   ```
 
   Go to [http://localhost:3000/](http://localhost:3000/)
+
+- prettierを適用させる
+
+  ```bash
+  pnpm run format
+  ```
+
+- eslintでチェック
+
+  ```bash
+  pnpm run lint
+  ```

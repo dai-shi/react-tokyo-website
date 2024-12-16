@@ -1,35 +1,36 @@
-import '../styles.css';
+import "../styles.css";
 
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
+import React from "react";
 
-import { Header } from '../components/header';
-import { Footer } from '../components/footer';
+import { Header } from "../components/header";
+import { Footer } from "../components/footer";
 
 type RootLayoutProps = { children: ReactNode };
 
 const meta = {
-  title: 'React Tokyo',
-  description: 'A React community in Tokyo',
-  icon: '/images/favicon.png',
+	title: "React Tokyo",
+	description: "A React community in Tokyo",
+	icon: "/images/favicon.png",
 };
 
 export default async function RootLayout({ children }: RootLayoutProps) {
-  return (
-    <div className="font-['Nunito']">
-      <title>{meta.title}</title>
-      <meta name="description" content={meta.description} />
-      <link rel="icon" type="image/png" href={meta.icon} />
-      <Header />
-      <main className="m-6 flex items-center justify-center *:min-h-64 *:min-w-64 lg:m-0 lg:min-h-svh">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="font-['Nunito']">
+			<title>{meta.title}</title>
+			<meta name="description" content={meta.description} />
+			<link rel="icon" type="image/png" href={meta.icon} />
+			<Header />
+			<main className="m-6 flex items-center justify-center *:min-h-64 *:min-w-64 lg:m-0 lg:min-h-svh">
+				{children}
+			</main>
+			<Footer />
+		</div>
+	);
 }
 
 export const getConfig = async () => {
-  return {
-    render: 'static',
-  } as const;
+	return {
+		render: "static",
+	} as const;
 };

@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "standard",
+    "prettier",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "env": { "browser": true },
+  "globals": {},
+  "rules": {
+    "brace-style": "error",
+    "space-in-parens": "error",
+    "indent": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off"
+  }
+}
