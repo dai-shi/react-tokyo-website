@@ -1,17 +1,18 @@
-import { JoinDiscordServer } from '../components/joinDiscordServer';
-import { Faq } from '../components/faq';
+import { JoinDiscordServer } from "../components/joinDiscordServer";
+import { Faq } from "../components/faq";
 const meta = {
-  title: 'React Tokyo',
+  title: "React Tokyo",
 };
 
 export default async function HomePage() {
   return (
-    <div className='space-y-10 lg:space-y-0'>
+    <div className="space-y-10 lg:pt-40">
       <title>{meta.title}</title>
-    <div className='lg:h-[calc(100vh-100px)] lg:flex lg:flex-col lg:justify-center lg:items-center'>
-    <div className="grid grid-rows-3 lg:grid-cols-3 lg:grid-flow-row gap-y-2 gap-x-8">
+      <div className="grid grid-rows-3 lg:grid-cols-3 lg:grid-flow-row gap-y-2 gap-x-8">
         <div className="lg:col-span-2 flex flex-col items-start justify-center">
-          <h1 className="text-4xl font-bold tracking-tight">We are React Tokyo Community</h1>
+          <h1 className="text-4xl font-bold tracking-tight">
+            We are React Tokyo Community
+          </h1>
         </div>
         <div className="lg:row-span-3 flex items-center justify-center">
           <div className="w-40 lg:w-80 rounded-full bg-[#F45554]">
@@ -20,7 +21,9 @@ export default async function HomePage() {
         </div>
         <div className="lg:row-span-2 lg:col-span-2 flex flex-col items-start justify-center gap-8">
           <div>
-            <p>東京を中心としたReactのオンライン＆オフラインコミュニティです。</p>
+            <p>
+              東京を中心としたReactのオンライン＆オフラインコミュニティです。
+            </p>
             <p>
               オンラインでは、Discordを交流の場として活動し、オフラインでは、Reactのイベントを開催します。
             </p>
@@ -30,14 +33,13 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-    </div>
-    <Faq />
+      <Faq />
     </div>
   );
 }
 
 export const getConfig = async () => {
   return {
-    render: 'static',
+    render: "static",
   } as const;
 };
