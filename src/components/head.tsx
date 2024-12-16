@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 type MetaData = {
   title: string;
   description: string;
@@ -9,6 +7,7 @@ type MetaData = {
 const DEFAULT_META_DATA: MetaData = {
   title: "React Tokyo",
   description: "A React community in Tokyo",
+
   icon: "/images/favicon.png",
 };
 
