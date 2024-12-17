@@ -14,12 +14,6 @@
   pnpm install
   ```
 
-- フロントエンドのビルド
-
-  ```bash
-  pnpm run build
-  ```
-
 - フロントエンドの起動
 
   ```bash
