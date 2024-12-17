@@ -9,9 +9,9 @@ import { Footer } from "../components/footer";
 type RootLayoutProps = { children: ReactNode };
 
 const meta = {
-	title: "React Tokyo",
-	description: "A React community in Tokyo",
-	icon: "/images/favicon.png",
+  title: "React Tokyo",
+  description: "A React community in Tokyo",
+  icon: "/images/favicon.png",
 };
 
 export default async function RootLayout({ children }: RootLayoutProps) {
@@ -27,7 +27,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 }
 
 export const getConfig = async () => {
-	return {
-		render: "static",
-	} as const;
+  return {
+    render: "static",
+  } as const;
 };
