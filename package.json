@@ -7,8 +7,8 @@
     "dev": "waku dev",
     "build": "waku build --with-vercel-static",
     "start": "waku start",
-    "lint": "npx eslint ./src/**/*.ts && npx eslint ./src/**/*.tsx",
-    "lint:fix": "npx eslint --fix ./src/**/*.ts && npx eslint --fix ./src/**/*.tsx",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint --fix \"./src/**/*.{ts,tsx}\"",
     "format": "pnpm exec prettier . --write"
   },
   "dependencies": {
