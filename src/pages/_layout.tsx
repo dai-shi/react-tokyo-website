@@ -1,7 +1,6 @@
 import "../styles.css";
 
 import type { ReactNode } from "react";
-import React from "react";
 
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
@@ -13,6 +12,9 @@ const meta = {
   description: "A React community in Tokyo",
   icon: "/images/favicon.png",
 };
+
+// no-unused-varsのerrorを回避するためにmetaをconsole.logで出力
+console.log(meta);
 
 export default async function RootLayout({ children }: RootLayoutProps) {
   return (

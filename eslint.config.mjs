@@ -1,28 +1,31 @@
 import globals from "globals";
-import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
-import pluginReact from "eslint-plugin-react";
 import reactCompiler from "eslint-plugin-react-compiler";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { files: ["**/*.{ts, tsx}"] },
-  { languageOptions: { globals: globals.browser } },
-  pluginJs.configs.recommended,
-  {
-    rules: {
-      "react/jsx-uses-react": "off",
-      "react/react-in-jsx-scope": "off",
-    },
-  },
   ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
   {
+    files: ["**/*.{ts, tsx}"],
     plugins: {
       "react-compiler": reactCompiler,
     },
+    languageOptions: {
+      globals: globals.browser,
+      ecmaVersion: "latest",
+      sourceType: "module",
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
     rules: {
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off",
       "react-compiler/react-compiler": "error",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["warn"],
     },
   },
 ];

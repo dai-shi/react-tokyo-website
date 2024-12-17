@@ -1,5 +1,4 @@
 import { Link } from "waku";
-import React from "react";
 
 export const Header = () => {
   return (

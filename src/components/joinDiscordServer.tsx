@@ -1,5 +1,3 @@
-import React from "react";
-
 export const JoinDiscordServer = () => (
   <a
     className="px-4 py-2 rounded-md bg-[#5865F2] flex items-center gap-4"
