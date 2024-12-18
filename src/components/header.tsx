@@ -1,5 +1,5 @@
-import { Link } from 'waku';
-import { JoinDiscordServer } from './joinDiscordServer';
+import { Link } from "waku";
+import { JoinDiscordServer } from "./joinDiscordServer";
 
 export const Header = () => {
   return (
