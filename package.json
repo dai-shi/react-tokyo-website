@@ -7,10 +7,12 @@
     "dev": "waku dev",
     "build": "waku build --with-vercel-static",
     "start": "waku start",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "lint": "eslint \"./src/**/*.{ts,tsx}\"",
-    "lint:fix": "eslint --fix \"./src/**/*.{ts,tsx}\""
+    "test": "pnpm run '/^test:.*/'",
+    "test:format": "prettier --check .",
+    "test:lint": "eslint \"./src/**/*.{ts,tsx}\"",
+    "test:types": "tsc --noEmit",
+    "fix:format": "prettier --write .",
+    "fix:lint": "eslint --fix \"./src/**/*.{ts,tsx}\""
   },
   "dependencies": {
     "react": "19.0.0",
