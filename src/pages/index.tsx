@@ -2,12 +2,6 @@ import { JoinDiscordServer } from "../components/joinDiscordServer";
 import { Head } from "../components/head";
 import { Faq } from "../components/faq";
 
-const meta = {
-  title: "React Tokyo",
-};
-// no-unused-varsのerrorを回避するためにmetaをconsole.logで出力
-console.log(meta);
-
 const descriptions = [
   "東京を中心に、オンラインとオフラインの両方で活動するReactコミュニティです。",
   "オンラインでは、Discordを通じた情報交換や交流の場を提供し、オフラインではReactに関するイベントを開催します。",
