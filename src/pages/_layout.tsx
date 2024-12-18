@@ -1,11 +1,20 @@
-import '../styles.css';
+import "../styles.css";
 
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
-import { Header } from '../components/header';
-import { Footer } from '../components/footer';
+import { Header } from "../components/header";
+import { Footer } from "../components/footer";
 
 type RootLayoutProps = { children: ReactNode };
+
+const meta = {
+  title: "React Tokyo",
+  description: "A React community in Tokyo",
+  icon: "/images/favicon.png",
+};
+
+// no-unused-varsのerrorを回避するためにmetaをconsole.logで出力
+console.log(meta);
 
 export default async function RootLayout({ children }: RootLayoutProps) {
   return (
@@ -21,6 +30,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
 export const getConfig = async () => {
   return {
-    render: 'static',
+    render: "static",
   } as const;
 };

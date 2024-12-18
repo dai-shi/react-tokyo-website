@@ -5,7 +5,11 @@ export const JoinDiscordServer = () => (
     target="_blank"
     rel="noreferrer"
   >
-    <img className="h-5" src="/images/discord-logo-white.svg" alt="Discord logo" />
-    <span className="text-white text-sm sm:text-base">Join Discord Server</span>
+    <img
+      className="h-5"
+      src="/images/discord-logo-white.svg"
+      alt="Discord logo"
+    />
+    <span className="text-white">Join Discord Server</span>
   </a>
 );
