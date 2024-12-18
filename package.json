@@ -9,7 +9,7 @@
     "start": "waku start",
     "lint": "eslint \"./src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix \"./src/**/*.{ts,tsx}\"",
-    "format": "pnpm exec prettier . --write"
+    "format": "prettier . --write"
   },
   "dependencies": {
     "react": "19.0.0",
