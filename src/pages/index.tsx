@@ -22,7 +22,9 @@ export default async function HomePage() {
         </div>
         <div className="order-2 lg:order-1 lg:col-span-2 flex flex-col items-start justify-center py-6">
           <h1 className="text-2xl sm:text-4xl font-bold tracking-tight break-keep">
-            分からないを分かち合う、<wbr />広げようReactの世界。
+            分からないを分かち合う、
+            <wbr />
+            広げようReactの世界。
           </h1>
         </div>
         <div className="order-3 lg:row-span-2 lg:col-span-2 flex flex-col items-start justify-center gap-8">
