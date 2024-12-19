@@ -1,3 +1,5 @@
+import { clsx } from "clsx";
+
 type JoinDiscordServerProps = {
   isHeader?: boolean;
 };
@@ -12,17 +14,34 @@ export const JoinDiscordServer = ({
     rel="noreferrer"
   >
     <img
-      className={isHeader ? `h-4` : `h-5`}
+      className={clsx(
+        {
+          "h-4" : isHeader,
+          "h-5" : !isHeader
+        }
+      )}
       src="/images/discord-logo-white.svg"
       alt="Discord logo"
     />
     <span
-      className={`text-white ${isHeader ? `text-sm hidden sm:block` : `block`}`}
+      className={clsx(
+        "text-white",
+        {
+          "text-sm hidden sm:block" : isHeader,
+          "block" : !isHeader,
+        }
+      )}
     >
       Join Discord Server
     </span>
     <span
-      className={`text-white ${isHeader ? `text-sm block sm:hidden` : `hidden`}`}
+      className={clsx(
+        "text-white",
+        {
+          "text-sm block sm:hidden" : isHeader,
+          "hidden" : !isHeader,
+        }
+      )}
     >
       Join Us
     </span>
