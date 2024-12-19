@@ -10,6 +10,7 @@ export const JoinDiscordServer = () => (
       src="/images/discord-logo-white.svg"
       alt="Discord logo"
     />
-    <span className="text-white">Join Discord Server</span>
+    <span className="text-white hidden sm:block">Join Discord Server</span>
+    <span className="text-white block sm:hidden">Join Us</span>
   </a>
 );
