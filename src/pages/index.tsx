@@ -21,8 +21,8 @@ export default async function HomePage() {
           </div>
         </div>
         <div className="order-2 lg:order-1 lg:col-span-2 flex flex-col items-start justify-center py-6">
-          <h1 className="text-4xl font-bold tracking-tight">
-            分からないを分かち合う、広げようReactの世界。
+          <h1 className="text-2xl sm:text-4xl font-bold tracking-tight whitespace-pre-line sm:whitespace-normal">
+            {"分からないを分かち合う、\n広げようReactの世界。"}
           </h1>
         </div>
         <div className="order-3 lg:row-span-2 lg:col-span-2 flex flex-col items-start justify-center gap-8">
