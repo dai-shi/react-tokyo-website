@@ -12,7 +12,7 @@ export const JoinDiscordServer = ({
     rel="noreferrer"
   >
     <img
-      className={`${isHeader ? `h-4` : `h-5`}`}
+      className={isHeader ? `h-4` : `h-5`}
       src="/images/discord-logo-white.svg"
       alt="Discord logo"
     />
