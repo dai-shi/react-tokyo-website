@@ -12,17 +12,17 @@ export const JoinDiscordServer = ({
     rel="noreferrer"
   >
     <img
-      className="h-5"
+      className={`${isResponsive ? `h-4` : `h-5`}`}
       src="/images/discord-logo-white.svg"
       alt="Discord logo"
     />
     <span
-      className={`text-white ${isResponsive ? `hidden sm:block` : `block`}`}
+      className={`text-white ${isResponsive ? `text-sm hidden sm:block` : `block`}`}
     >
       Join Discord Server
     </span>
     <span
-      className={`text-white ${isResponsive ? `block sm:hidden` : `hidden`}`}
+      className={`text-white ${isResponsive ? `text-sm block sm:hidden` : `hidden`}`}
     >
       Join Us
     </span>
