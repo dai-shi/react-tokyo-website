@@ -14,34 +14,26 @@ export const JoinDiscordServer = ({
     rel="noreferrer"
   >
     <img
-      className={clsx(
-        {
-          "h-4" : isHeader,
-          "h-5" : !isHeader
-        }
-      )}
+      className={clsx({
+        "h-4": isHeader,
+        "h-5": !isHeader,
+      })}
       src="/images/discord-logo-white.svg"
       alt="Discord logo"
     />
     <span
-      className={clsx(
-        "text-white",
-        {
-          "text-sm hidden sm:block" : isHeader,
-          "block" : !isHeader,
-        }
-      )}
+      className={clsx("text-white", {
+        "text-sm hidden sm:block": isHeader,
+        block: !isHeader,
+      })}
     >
       Join Discord Server
     </span>
     <span
-      className={clsx(
-        "text-white",
-        {
-          "text-sm block sm:hidden" : isHeader,
-          "hidden" : !isHeader,
-        }
-      )}
+      className={clsx("text-white", {
+        "text-sm block sm:hidden": isHeader,
+        hidden: !isHeader,
+      })}
     >
       Join Us
     </span>
