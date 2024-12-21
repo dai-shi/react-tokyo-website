@@ -35,10 +35,10 @@ export const Faq = () => {
   return (
     <div className="max-w-5xl space-y-4 lg:space-y-8">
       <h2 className="text-3xl font-bold">FAQ</h2>
-      <dl className="space-y-5">
+      <dl className="space-y-6">
         {faqs.map((faq, index) => (
-          <div key={index} className="space-y-1 tracking-wider text-xl">
-            <dt className="font-semibold">
+          <div key={index} className="space-y-4 tracking-wider">
+            <dt className="font-semibold text-xl">
               <span className="text-[#F45554]">Q:</span> {faq.question}
             </dt>
             <dd className="text-pretty">A: {faq.answer}</dd>
