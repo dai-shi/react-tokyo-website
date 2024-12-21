@@ -8,7 +8,7 @@ export const Header = () => {
         <Link to="/">React Tokyo</Link>
       </h2>
       <div>
-        <JoinDiscordServer />
+        <JoinDiscordServer isHeader />
       </div>
     </header>
   );
