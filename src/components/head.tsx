@@ -45,6 +45,9 @@ export const Head = (metaProps: Partial<MetaData>) => {
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.ogImage} />
+
+      {/* viewport meta tag */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </>
   );
 };
