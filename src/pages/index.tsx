@@ -1,7 +1,6 @@
 import { JoinDiscordServer } from "../components/joinDiscordServer";
 import { Head } from "../components/head";
 import { Faq } from "../components/faq";
-import { Contact } from "../components/contact";
 
 const descriptions = [
   "東京を中心に、オンラインとオフラインの両方で活動するReactコミュニティです。",
@@ -38,7 +37,7 @@ export default async function HomePage() {
         </div>
       </div>
       <Faq />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 }
