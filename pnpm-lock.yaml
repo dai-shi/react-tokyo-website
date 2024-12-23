@@ -17,6 +17,9 @@ dependencies:
   waku:
     specifier: 0.21.9
     version: 0.21.9(react-dom@19.0.0)(react-server-dom-webpack@19.0.0)(react@19.0.0)
+  zod:
+    specifier: ^3.24.1
+    version: 3.24.1
 
 devDependencies:
   '@eslint/compat':
@@ -3942,4 +3945,3 @@ packages:
 
   /zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
-    dev: true
