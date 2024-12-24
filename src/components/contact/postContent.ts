@@ -1,5 +1,3 @@
-"use server";
-
 import { z, ZodType } from "zod";
 import { ActionResponse, ContactFormData } from "./types";
 
@@ -30,6 +28,7 @@ type FormNames = keyof ContactFormData;
  * その為、送信成否のエラーハンドリングは書いてません。
  * ファーストリリース後に、問い合わせ機能を別のやり方で再構築するのが良いかと思います。
  *
+ * @param _prevState 直前の状態（不使用）
  * @param formData Contactフォームからの入力値
  */
 export const postContent = async (
@@ -73,9 +72,18 @@ export const postContent = async (
     },
   );
 
+  /**
+   * <form>submitイベントのデフォルト動作を利用したフォーム値クリアが
+   * できない為ここでクリアする
+   */
+  const blankData = Object.fromEntries(
+    Object.keys(rawData).map((key) => [key, ""]),
+  ) as ContactFormData;
+
   return {
     success: true,
     message:
       "お問い合わせありがとうございます🎉担当者よりご連絡いたしますので、しばらくお待ちください。",
+    inputs: blankData,
   };
 };
