@@ -20,7 +20,7 @@ const POST_INPUT_NAMES = {
 /**
  * 送信先Google FormのURL
  */
-const URL =
+const POST_URL =
   "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf3i5jYhfn-f1Yhd9gt6r0xeXqfAJjy2SxBGZg9sK7IQ4qNzA/formResponse";
 
 type FormNames = keyof ContactFormData;
@@ -62,7 +62,7 @@ export const postContent = async (
     )
     .join("&");
 
-  await fetch(URL, {
+  await fetch(POST_URL, {
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
