@@ -28,7 +28,8 @@ type FormNames = keyof ContactFormData;
 /**
  * Contactフォームからのお問い合わせ内容を送信する
  *
- * 現状、自サイトからGoogle Form（以下GF）にデータ送信しています。
+ * 現状、Google Form（以下GF）をカスタムしてコミュニティサイトからGF本体にデータ送信しています。
+ * （GFが必要とするinput nameを抽出し、問い合わせ内容と共にGF本体があるURLに送信している）
  * GFの仕様上no-corsでしか送れないのでレスポンスを受け取れません。
  * その為、送信成否のエラーハンドリングを書いていません。
  * 参考:https://github.com/react-tokyo/tasks/issues/21#issuecomment-2560577026
