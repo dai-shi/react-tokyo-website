@@ -12,16 +12,16 @@ const contactFormSchema: ZodType<ContactFormData> = z.object({
  * サイト側のinputとGoogle Formのinputがそれぞれ対応している
  */
 const POST_INPUT_NAMES = {
-  name: "entry.854538819",
-  email: "entry.685323345",
-  contents: "entry.1786766899",
+  name: "entry.461453517",
+  email: "entry.2068566578",
+  contents: "entry.1423539808",
 } as const;
 
 /**
  * 送信先Google FormのURL
  */
 const POST_URL =
-  "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf3i5jYhfn-f1Yhd9gt6r0xeXqfAJjy2SxBGZg9sK7IQ4qNzA/formResponse";
+  "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBvPa0tULPpZn-id6iUpuIC4mLMA_dO_OoVkiK4fUrPoO8QA/formResponse";
 
 type FormNames = keyof ContactFormData;
 
