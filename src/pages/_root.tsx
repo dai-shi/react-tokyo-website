@@ -30,6 +30,6 @@ export default async function RootElement({
 
 export const getConfig = async () => {
   return {
-    render: "static",
+    render: 'static',
   } as const;
 };

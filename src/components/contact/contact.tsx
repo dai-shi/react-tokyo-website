@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useActionState } from "react";
-import { ActionResponse } from "./types";
-import { postContent } from "./postContent";
+import { useActionState } from 'react';
+import { ActionResponse } from './types';
+import { postContent } from './postContent';
 
 const initialState: ActionResponse = {
   success: false,
-  message: "",
+  message: '',
 };
 export const Contact = () => {
   const [state, action, isPending] = useActionState(postContent, initialState);
@@ -66,7 +66,7 @@ export const Contact = () => {
           disabled={isPending}
           className="w-[150px] rounded-full bg-[#5865F2] p-2 text-white"
         >
-          {isPending ? "送信中..." : "送信"}
+          {isPending ? '送信中...' : '送信'}
         </button>
         {state.success && <p className="text-lg">{state.message}</p>}
       </form>
