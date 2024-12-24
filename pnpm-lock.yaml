@@ -23,6 +23,9 @@ importers:
       waku:
         specifier: 0.21.9
         version: 0.21.9(@types/node@22.10.1)(react-dom@19.0.0(react@19.0.0))(react-server-dom-webpack@19.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(webpack@5.97.0))(react@19.0.0)(terser@5.36.0)
+      zod:
+        specifier: ^3.24.1
+        version: 3.24.1
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.4
