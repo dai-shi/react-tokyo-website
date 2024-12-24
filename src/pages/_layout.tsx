@@ -1,9 +1,9 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import "../styles.css";
+import '../styles.css';
 
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
+import { Header } from '../components/header';
+import { Footer } from '../components/footer';
 
 type RootLayoutProps = { children: ReactNode };
 
@@ -11,7 +11,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <div className="font-['Nunito']">
       <Header />
-      <main className="m-6 flex justify-center *:min-h-64 *:min-w-64 lg:m-0 lg:min-h-svh lg:pb-20">
+      <main className="m-6 flex justify-center *:min-h-64 *:min-w-64 lg:my-0 lg:min-h-svh lg:pb-20">
         {children}
       </main>
       <Footer />
@@ -21,6 +21,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
 export const getConfig = async () => {
   return {
-    render: "static",
+    render: 'static',
   } as const;
 };
