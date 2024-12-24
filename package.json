@@ -7,6 +7,7 @@
     "dev": "waku dev",
     "build": "waku build --with-vercel-static",
     "start": "waku start",
+    "generateGatheredBlogs": "tsx scripts/generateGatheredBlogs.ts",
     "test": "pnpm run '/^test:.*/'",
     "test:format": "prettier --check .",
     "test:lint": "eslint \"./src/**/*.{ts,tsx}\"",
