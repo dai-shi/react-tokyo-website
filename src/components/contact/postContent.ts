@@ -17,16 +17,16 @@ const POST_INPUT_NAMES = {
   contents: "entry.1786766899",
 } as const;
 
+/**
+ * 送信先Google FormのURL
+ */
+const URL =
+  "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf3i5jYhfn-f1Yhd9gt6r0xeXqfAJjy2SxBGZg9sK7IQ4qNzA/formResponse";
+
 type FormNames = keyof ContactFormData;
 
 /**
  * Contactフォームからのお問い合わせ内容を送信する
- *
- * 現在自サイトからGoogle Formにデータ送信しています。
- * Google Formの仕様上no-corsでしか送れないので
- * レスポンスを受け取れません。
- * その為、送信成否のエラーハンドリングは書いてません。
- * ファーストリリース後に、問い合わせ機能を別のやり方で再構築するのが良いかと思います。
  *
  * @param _prevState 直前の状態（不使用）
  * @param formData Contactフォームからの入力値
@@ -62,15 +62,12 @@ export const postContent = async (
     )
     .join("&");
 
-  await fetch(
-    "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf3i5jYhfn-f1Yhd9gt6r0xeXqfAJjy2SxBGZg9sK7IQ4qNzA/formResponse",
-    {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body,
-    },
-  );
+  await fetch(URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body,
+  });
 
   /**
    * <form>submitイベントのデフォルト動作を利用したフォーム値クリアが
