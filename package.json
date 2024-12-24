@@ -43,7 +43,6 @@
   },
   "prettier": {
     "singleQuote": true,
-    "semi": true,
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
