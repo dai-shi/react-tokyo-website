@@ -38,10 +38,14 @@ export const Faq = () => {
       <dl className="space-y-6">
         {faqs.map((faq, index) => (
           <div key={index} className="space-y-4 tracking-wider">
-            <dt className="text-xl font-semibold">
-              <span className="text-[#F45554]">Q:</span> {faq.question}
+            <dt className="grid grid-cols-[2rem_1fr] gap-1 text-xl font-semibold">
+              <span className="justify-self-end text-[#F45554]">Q:</span>
+              <span>{faq.question}</span>
             </dt>
-            <dd className="text-pretty">A: {faq.answer}</dd>
+            <dd className="grid grid-cols-[2rem_1fr] gap-1 text-pretty">
+              <span className="justify-self-end">A:</span>
+              <span>{faq.answer}</span>
+            </dd>
           </div>
         ))}
       </dl>
