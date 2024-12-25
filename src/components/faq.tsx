@@ -38,7 +38,7 @@ export const Faq = () => {
       <dl className="space-y-6">
         {faqs.map((faq, index) => (
           <div key={index} className="max-w-3xl space-y-4 tracking-wider">
-            <dt className="grid grid-cols-[2rem_1fr] gap-1 text-xl font-semibold">
+            <dt className="grid grid-cols-[1.5rem_1fr] gap-1 text-xl font-semibold">
               <span
                 className="justify-self-end text-[#F45554]"
                 aria-hidden="true"
@@ -48,7 +48,7 @@ export const Faq = () => {
               <span className="sr-only">質問</span>
               <span>{faq.question}</span>
             </dt>
-            <dd className="grid grid-cols-[2rem_1fr] gap-1 text-pretty">
+            <dd className="grid grid-cols-[1.5rem_1fr] gap-1 text-pretty">
               <span className="justify-self-end" aria-hidden="true">
                 A:
               </span>
