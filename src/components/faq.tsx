@@ -33,11 +33,11 @@ const faqs = [
 
 export const Faq = () => {
   return (
-    <div className="max-w-5xl space-y-4 lg:space-y-8">
+    <div className="space-y-4 lg:space-y-8">
       <h2 className="text-3xl font-bold">FAQ</h2>
       <dl className="space-y-6">
         {faqs.map((faq, index) => (
-          <div key={index} className="space-y-4 tracking-wider">
+          <div key={index} className="max-w-3xl space-y-4 tracking-wider">
             <dt className="grid grid-cols-[2rem_1fr] gap-1 text-xl font-semibold">
               <span className="justify-self-end text-[#F45554]">Q:</span>
               <span>{faq.question}</span>
