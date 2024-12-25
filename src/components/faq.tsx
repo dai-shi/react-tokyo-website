@@ -33,15 +33,28 @@ const faqs = [
 
 export const Faq = () => {
   return (
-    <div className="max-w-5xl space-y-4 lg:space-y-8">
+    <div className="space-y-4 lg:space-y-8">
       <h2 className="text-3xl font-bold">FAQ</h2>
       <dl className="space-y-6">
         {faqs.map((faq, index) => (
-          <div key={index} className="space-y-4 tracking-wider">
-            <dt className="text-xl font-semibold">
-              <span className="text-[#F45554]">Q:</span> {faq.question}
+          <div key={index} className="max-w-3xl space-y-4 tracking-wider">
+            <dt className="grid grid-cols-[1.5rem_1fr] gap-1 text-xl font-semibold">
+              <span
+                className="justify-self-end text-[#F45554]"
+                aria-hidden="true"
+              >
+                Q:
+              </span>
+              <span className="sr-only">質問</span>
+              <span>{faq.question}</span>
             </dt>
-            <dd className="text-pretty">A: {faq.answer}</dd>
+            <dd className="grid grid-cols-[1.5rem_1fr] gap-1 text-pretty">
+              <span className="justify-self-end" aria-hidden="true">
+                A:
+              </span>
+              <span className="sr-only">回答</span>
+              <span>{faq.answer}</span>
+            </dd>
           </div>
         ))}
       </dl>
