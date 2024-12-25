@@ -1,6 +1,6 @@
 ## チェックリスト
 
-- [ ] 事前に[サイト実装タスク](https://github.com/orgs/react-tokyo/projects/3)にタスクを作成して紐づけている
+- [ ] 事前に[サイト実装プロジェクト](https://github.com/orgs/react-tokyo/projects/3)にタスクを作成して紐づけている
 
 Close https://github.com/react-tokyo/tasks/issues/(タスク番号)
 
