@@ -9,14 +9,14 @@ type MetaData = {
 };
 
 const DEFAULT_META_DATA: MetaData = {
-  title: "React Tokyo",
+  title: 'React Tokyo',
   description:
-    "東京を中心に、オンラインとオフラインの両方で活動するReactコミュニティです。オンラインでは、Discordを通じた情報交換や交流の場を提供し、オフラインではReactに関するイベントを開催します。",
-  icon: "/images/favicon.png",
-  ogImage: "https://react-tokyo.vercel.app/images/react-tokyo-logo-opg.png",
-  ogUrl: "https://react-tokyo.vercel.app",
-  twitterCard: "summary_large_image",
-  twitterSite: "@ReactTokyo",
+    '東京を中心に、オンラインとオフラインの両方で活動するReactコミュニティです。オンラインでは、Discordを通じた情報交換や交流の場を提供し、オフラインではReactに関するイベントを開催します。',
+  icon: '/images/favicon.png',
+  ogImage: 'https://react-tokyo.vercel.app/images/react-tokyo-logo-opg.png',
+  ogUrl: 'https://react-tokyo.vercel.app',
+  twitterCard: 'summary_large_image',
+  twitterSite: '@ReactTokyo',
 };
 
 /**
