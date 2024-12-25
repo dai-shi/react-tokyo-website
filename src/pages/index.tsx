@@ -14,7 +14,7 @@ const descriptions = [
 
 export default async function HomePage() {
   return (
-    <div className="space-y-10 md:space-y-16 lg:pt-40">
+    <div className="space-y-10 text-gray-800 md:space-y-16 lg:pt-40">
       <Head />
       <div className="grid grid-rows-[auto_auto_auto] gap-x-8 gap-y-2 lg:grid-flow-row lg:grid-cols-3">
         <div className="order-1 flex items-center justify-center lg:order-2 lg:row-span-3">
