@@ -10,10 +10,10 @@
     "generateGatheredBlogs": "tsx scripts/generateGatheredBlogs.ts",
     "test": "pnpm run '/^test:.*/'",
     "test:format": "prettier --check .",
-    "test:lint": "eslint \"./src/**/*.{ts,tsx}\"",
+    "test:lint": "eslint .",
     "test:types": "tsc --noEmit",
     "fix:format": "prettier --write .",
-    "fix:lint": "eslint --fix \"./src/**/*.{ts,tsx}\""
+    "fix:lint": "eslint --fix ."
   },
   "dependencies": {
     "clsx": "^2.1.1",
