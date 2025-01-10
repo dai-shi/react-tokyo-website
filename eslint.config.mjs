@@ -1,31 +1,35 @@
-import globals from 'globals';
+import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import importPlugin from 'eslint-plugin-import';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 import reactCompiler from 'eslint-plugin-react-compiler';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-  ...tseslint.configs.recommended,
+export default tseslint.config(
+  { ignores: ['dist/'] },
+  eslint.configs.recommended,
+  tseslint.configs.recommended,
+  importPlugin.flatConfigs.recommended,
+  jsxA11y.flatConfigs.recommended,
+  react.configs.flat.recommended,
+  react.configs.flat['jsx-runtime'],
   {
-    files: ['**/*.{ts, tsx}'],
     plugins: {
       'react-compiler': reactCompiler,
-    },
-    languageOptions: {
-      globals: globals.browser,
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      'react-hooks': reactHooks,
     },
     settings: {
-      react: {
-        version: 'detect',
-      },
+      'import/resolver': { typescript: true },
+      react: { version: 'detect' },
     },
     rules: {
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react-compiler/react-compiler': 'error',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn'],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      ],
+      'react-compiler/react-compiler': 'warn',
+      ...reactHooks.configs.recommended.rules,
     },
   },
-];
+);
