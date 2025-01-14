@@ -1,5 +1,5 @@
 import { z, ZodType } from 'zod';
-import { ActionResponse, ContactFormData } from './types';
+import { ActionResponse, ContactFormData, GASResponse } from './types';
 
 const contactFormSchema: ZodType<ContactFormData> = z.object({
   name: z.string().min(1, '名前または会社名を入力してください。'),
@@ -21,13 +21,6 @@ type FormNames = keyof ContactFormData;
 
 /**
  * Contactフォームからのお問い合わせ内容を送信する
- *
- * 現状、Google Form（以下GF）をカスタムしてコミュニティサイトからGF本体にデータ送信しています。
- * （GFが必要とするinput nameを抽出し、問い合わせ内容と共にGF本体があるURLに送信している）
- * GFの仕様上no-corsでしか送れないのでレスポンスを受け取れません。
- * その為、送信成否のエラーハンドリングを書いていません。
- * 参考:https://github.com/react-tokyo/tasks/issues/21#issuecomment-2560577026
- * ファーストリリース後に、問い合わせ機能を別のやり方で再構築するのが良いかと思います。
  *
  * @param _prevState 直前の状態（不使用）
  * @param formData Contactフォームからの入力値
@@ -65,24 +58,49 @@ export const postContent = async (
     )
     .join('&');
 
-  await fetch(POST_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body,
-  });
+  try {
+    const response = await fetch(POST_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+    });
 
-  /**
-   * <form>submitイベントのデフォルト動作を利用したフォーム値クリアが
-   * できない為ここでクリアする
-   */
-  const blankData = Object.fromEntries(
-    Object.keys(rawData).map((key) => [key, '']),
-  ) as ContactFormData;
+    if (!response.ok) {
+      return {
+        success: false,
+        message:
+          'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+      };
+    }
 
-  return {
-    success: true,
-    message:
-      'お問い合わせありがとうございます🎉担当者よりご連絡いたしますので、しばらくお待ちください。',
-    inputs: blankData,
-  };
+    const result: GASResponse = await response.json();
+    if (!result.success) {
+      return {
+        success: false,
+        message:
+          'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+      };
+    }
+
+    /**
+     * <form>submitイベントのデフォルト動作を利用したフォーム値クリアが
+     * できない為ここでクリアする
+     */
+    const blankData = Object.fromEntries(
+      Object.keys(rawData).map((key) => [key, '']),
+    ) as ContactFormData;
+
+    return {
+      success: true,
+      message:
+        'お問い合わせありがとうございます🎉担当者よりご連絡いたしますので、しばらくお待ちください。',
+      inputs: blankData,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message:
+        'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+    };
+  }
 };
