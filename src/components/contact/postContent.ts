@@ -8,21 +8,15 @@ const contactFormSchema: ZodType<ContactFormData> = z.object({
 });
 
 /**
- * Google Formへの送信に必要なinput name
- * サイト側のinputとGoogle Formのinputがそれぞれ対応している
- */
-const POST_INPUT_NAMES = {
-  name: 'entry.461453517',
-  email: 'entry.2068566578',
-  contents: 'entry.1423539808',
-} as const;
-
-/**
- * 送信先Google FormのURL
+ * お問い合わせを送信するGASのURL
  */
 const POST_URL =
-  'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBvPa0tULPpZn-id6iUpuIC4mLMA_dO_OoVkiK4fUrPoO8QA/formResponse';
+  // React Tokyo
+  // 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBvPa0tULPpZn-id6iUpuIC4mLMA_dO_OoVkiK4fUrPoO8QA/formResponse';
 
+  // cordeliaテスト用
+  'https://script.google.com/macros/s/AKfycbwp6L2bZjdqtVE2iPsY0wNFupZWFfOUYkIQLJjiKN_gkCRSs-mAwLnYMbbLJPiFZl8Ytw/exec';
+const POST_INPUT_NAMES = ['name', 'email', 'contents'] as const;
 type FormNames = keyof ContactFormData;
 
 /**
@@ -60,18 +54,19 @@ export const postContent = async (
   }
 
   const body = Array.from(
-    formData.entries() as Iterable<[FormNames, FormDataEntryValue]>,
+    Object.entries(validatedData.data) as Iterable<
+      [FormNames, FormDataEntryValue]
+    >,
   )
-    .filter(([key]) => key in POST_INPUT_NAMES)
+    .filter(([key]) => POST_INPUT_NAMES.includes(key))
     .map(
       ([key, value]) =>
-        `${POST_INPUT_NAMES[key]}=${typeof value === 'string' ? encodeURIComponent(value) : ''}`,
+        `${key}=${typeof value === 'string' ? encodeURIComponent(value) : ''}`,
     )
     .join('&');
 
   await fetch(POST_URL, {
     method: 'POST',
-    mode: 'no-cors',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body,
   });
