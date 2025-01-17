@@ -13,7 +13,7 @@ const contactFormSchema: ZodType<ContactFormData> = z.object({
 const POST_URL =
   // 以下は本番用のGASにURLに変更してください。
   // cordeliaテスト用
-  'https://script.google.com/macros/s/AKfycbwp6L2bZjdqtVE2iPsY0wNFupZWFfOUYkIQLJjiKN_gkCRSs-mAwLnYMbbLJPiFZl8Ytw/exec';
+  'https://script.google.com/macros/s/AKfycbxF3UnLUavr7Rd4YcUzuJBAThLNAqpO5f0VlmAn7aPQguOQHzh2Qnss3wXquLpRyOd5yQ/exec';
 const POST_INPUT_NAMES = ['name', 'email', 'contents'] as const;
 type FormNames = keyof ContactFormData;
 
@@ -68,6 +68,7 @@ export const postContent = async (
         success: false,
         message:
           'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+        inputs: rawData,
       };
     }
 
@@ -77,6 +78,7 @@ export const postContent = async (
         success: false,
         message:
           'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+        inputs: rawData,
       };
     }
 
@@ -99,6 +101,7 @@ export const postContent = async (
       success: false,
       message:
         'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+      inputs: rawData,
     };
   }
 };
