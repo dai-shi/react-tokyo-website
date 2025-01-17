@@ -11,9 +11,7 @@ const contactFormSchema: ZodType<ContactFormData> = z.object({
  * お問い合わせを送信するGASのURL
  */
 const POST_URL =
-  // 以下は本番用のGASにURLに変更してください。
-  // cordeliaテスト用
-  'https://script.google.com/macros/s/AKfycbxF3UnLUavr7Rd4YcUzuJBAThLNAqpO5f0VlmAn7aPQguOQHzh2Qnss3wXquLpRyOd5yQ/exec';
+  'https://script.google.com/macros/s/AKfycbwP15VbacUQd7BugG3vJGhpAbwhGTsYpDOeA7I8TNVWaCJJ4mb1hezjxQeF4isiPIMX/exec';
 const POST_INPUT_NAMES = ['name', 'email', 'contents'] as const;
 type FormNames = keyof ContactFormData;
 
