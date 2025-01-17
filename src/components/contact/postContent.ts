@@ -86,7 +86,7 @@ export const postContent = async (
         'お問い合わせありがとうございます🎉担当者よりご連絡いたしますので、しばらくお待ちください。',
       inputs: blankData,
     };
-  } catch (error) {
+  } catch {
     return failureResult(rawData);
   }
 };
