@@ -64,22 +64,12 @@ export const postContent = async (
     });
 
     if (!response.ok) {
-      return {
-        success: false,
-        message:
-          'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
-        inputs: rawData,
-      };
+      return failureResult(rawData);
     }
 
     const result: GASResponse = await response.json();
     if (!result.success) {
-      return {
-        success: false,
-        message:
-          'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
-        inputs: rawData,
-      };
+      return failureResult(rawData);
     }
 
     /**
@@ -97,11 +87,21 @@ export const postContent = async (
       inputs: blankData,
     };
   } catch (error) {
-    return {
-      success: false,
-      message:
-        'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
-      inputs: rawData,
-    };
+    return failureResult(rawData);
   }
+};
+
+/**
+ * 送信失敗時の結果を返す
+ *
+ * @param inputs ユーザがフォームに入力したデータ
+ * @returns 失敗結果のオブジェクト
+ */
+const failureResult = (inputs: ContactFormData) => {
+  return {
+    success: false,
+    message:
+      'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+    inputs,
+  };
 };
