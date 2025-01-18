@@ -3,14 +3,7 @@ import { Head } from '../components/head';
 import { Blogs } from '../components/blogs';
 import { Faq } from '../components/faq';
 import { Contact } from '../components/contact/contact';
-
-const descriptions = [
-  '東京を中心に、オンラインとオフラインの両方で活動するReactコミュニティです。',
-  'オンラインでは、Discordを通じた情報交換や交流の場を提供し、オフラインではReactに関するイベントを開催します。',
-  '初心者から経験者まで、職種や技術力を問わず、誰でも気軽に参加できるのが特徴です。',
-  'Reactを学びたい人、新しいつながりを作りたい人、初めてコミュニティに参加する人も大歓迎です！',
-  '一緒にReactを楽しみましょう！',
-];
+import { Descriptions } from '../components/descriptions';
 
 export default async function HomePage() {
   return (
@@ -30,11 +23,7 @@ export default async function HomePage() {
           </h1>
         </div>
         <div className="order-3 flex flex-col items-start justify-center gap-8 lg:col-span-2 lg:row-span-2">
-          <div>
-            {descriptions.map((description, index) => (
-              <p key={index}>{description}</p>
-            ))}
-          </div>
+          <Descriptions />
           <div>
             <JoinDiscordServer />
           </div>
