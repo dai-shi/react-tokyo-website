@@ -7,7 +7,7 @@ import { JoinDiscordServer } from './joinDiscordServer';
 //   return ['/ourTeams'];
 // };
 
-export const Header = async () => {
+export const Header = () => {
   return (
     <header className="flex w-full items-center justify-between gap-3 bg-white/80 p-6 backdrop-blur-md lg:fixed lg:left-0 lg:top-0">
       <div className="flex flex-col gap-3 tracking-tight sm:flex-row">
