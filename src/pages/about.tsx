@@ -7,9 +7,9 @@ export default async function AboutPage() {
   return (
     <div className="text-gray-900 lg:pt-40">
       <Head title="About - React Tokyo" />
-      <div className="mx-auto max-w-[900px]">
+      <div className="mx-auto w-[calc(100vw-40px)] max-w-[1300px]">
         <div className="py-8 lg:py-14">
-          <h1 className="break-keep text-center text-2xl font-bold tracking-tight lg:text-4xl">
+          <h1 className="break-keep text-2xl font-bold tracking-tight lg:text-4xl">
             React Tokyoとは
           </h1>
         </div>
