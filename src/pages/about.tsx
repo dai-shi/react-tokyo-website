@@ -10,9 +10,7 @@ export default async function AboutPage() {
       <div className="mx-auto max-w-[900px]">
         <div className="py-8 lg:py-14">
           <h1 className="break-keep text-center text-2xl font-bold tracking-tight lg:text-4xl">
-            分からないを分かち合う、
-            <wbr />
-            広げようReactの世界。
+            React Tokyoとは
           </h1>
         </div>
         <Descriptions />

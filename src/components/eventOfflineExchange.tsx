@@ -20,7 +20,7 @@ export const EventOfflineExchange = () => {
   return (
     <div className="relative mt-12 w-[calc(100vw-40px)] max-w-[1300px] lg:mt-16">
       <div className="absolute bottom-[-210px] right-[-160px] w-[300px] rotate-[140deg] select-none lg:bottom-[-420px] lg:right-[-260px] lg:w-[680px]">
-        <img src="/images/atom-symbol-pink.png" alt="" />
+        <img src="/images/react-logo-pink.svg" alt="" />
       </div>
       <div className="relative space-y-4 lg:space-y-8">
         <h2 className="text-2xl font-bold lg:text-3xl">
