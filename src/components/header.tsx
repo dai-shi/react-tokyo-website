@@ -17,7 +17,7 @@ export const Header = () => {
         <nav className="self-start text-sm sm:self-end sm:text-base">
           <ul className="flex gap-3">
             <li>
-              <Link to="/our-teams">Our Teams</Link>
+              <Link to="/team">Team</Link>
             </li>
           </ul>
         </nav>
