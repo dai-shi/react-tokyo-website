@@ -8,6 +8,13 @@ export type ContactFormData = {
 };
 
 /**
+ * GASからのレスポンス
+ */
+export type GASResponse = {
+  success: boolean;
+};
+
+/**
  * useActionsStateの戻り値
  */
 export type ActionResponse = {

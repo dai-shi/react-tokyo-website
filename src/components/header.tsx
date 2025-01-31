@@ -9,15 +9,15 @@ import { JoinDiscordServer } from './joinDiscordServer';
 
 export const Header = () => {
   return (
-    <header className="flex w-full items-center justify-between gap-3 bg-white/80 p-6 backdrop-blur-md lg:fixed lg:left-0 lg:top-0">
-      <div className="flex flex-col gap-3 tracking-tight sm:flex-row">
-        <h2 className="text-xl font-bold sm:text-2xl">
+    <header className="z-10 flex w-full items-start justify-between bg-white/80 p-6 backdrop-blur-md sm:items-center lg:fixed lg:left-0 lg:top-0">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:gap-4">
+        <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
           <Link to="/">React Tokyo</Link>
         </h2>
-        <nav className="self-start text-sm sm:self-end sm:text-base">
-          <ul className="flex gap-3">
+        <nav>
+          <ul className="flex gap-2">
             <li>
-              <Link to="/team">Team</Link>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </nav>

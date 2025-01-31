@@ -68,7 +68,7 @@ export const Contact = () => {
         >
           {isPending ? '送信中...' : '送信'}
         </button>
-        {state.success && <p className="text-lg">{state.message}</p>}
+        {state.message && <p className="text-lg">{state.message}</p>}
       </form>
     </section>
   );
