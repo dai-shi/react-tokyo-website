@@ -23,6 +23,8 @@ export default async function OurTeamsPage() {
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <ComingSoon />
+          <ComingSoon />
+          <ComingSoon />
         </div>
       </div>
     </section>
