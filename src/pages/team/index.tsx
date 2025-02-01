@@ -1,4 +1,5 @@
 import { Card } from '../../components/card/card';
+import { ComingSoon } from '../../components/card/comingSoon';
 import { Head } from '../../components/head';
 
 export default async function OurTeamsPage() {
@@ -21,10 +22,7 @@ export default async function OurTeamsPage() {
           Supporter
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <ComingSoon />
         </div>
       </div>
     </section>
