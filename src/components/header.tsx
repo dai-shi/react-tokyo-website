@@ -15,12 +15,12 @@ export const Header = () => {
           <Link to="/">React Tokyo</Link>
         </h2>
         <nav>
-          <ul className="flex gap-2">
+          <ul className="flex gap-4">
             <li>
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/team">Team</Link>
+              <Link to="/members">Members</Link>
             </li>
           </ul>
         </nav>

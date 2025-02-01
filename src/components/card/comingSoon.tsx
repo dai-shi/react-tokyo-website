@@ -1,5 +1,6 @@
 /**
  * カードUIを返す
+ * これは仮です。
  */
 export const ComingSoon = () => {
   return (

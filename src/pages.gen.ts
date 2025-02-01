@@ -4,7 +4,7 @@ import type { getConfig as Root_getConfig } from './pages/_root';
 import type { getConfig as About_getConfig } from './pages/about';
 import type { getConfig as CodeOfConduct_getConfig } from './pages/code-of-conduct';
 import type { getConfig as Index_getConfig } from './pages/index';
-import type { getConfig as TeamIndex_getConfig } from './pages/team/index';
+import type { getConfig as MembersIndex_getConfig } from './pages/members/index';
 
 type Page =
   | ({ path: '/_root' } & GetConfigResponse<typeof Root_getConfig>)
@@ -13,7 +13,7 @@ type Page =
       typeof CodeOfConduct_getConfig
     >)
   | ({ path: '/' } & GetConfigResponse<typeof Index_getConfig>)
-  | ({ path: '/team' } & GetConfigResponse<typeof TeamIndex_getConfig>);
+  | ({ path: '/members' } & GetConfigResponse<typeof MembersIndex_getConfig>);
 
 declare module 'waku/router' {
   interface RouteConfig {
