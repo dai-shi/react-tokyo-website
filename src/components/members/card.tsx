@@ -17,9 +17,9 @@ export const Card = ({ profile }: { profile: Profile }) => {
       {profile.description && (
         <p className="max-w-72 break-keep text-center">{profile.description}</p>
       )}
-      {profile.snsUrl && (
+      {profile.xUrl && (
         <a
-          href={profile.snsUrl}
+          href={profile.xUrl}
           target="_blank"
           rel="noreferrer"
           className="mt-auto"
