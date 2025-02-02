@@ -13,7 +13,7 @@ export default async function MembersPage() {
         <h2 className="text-center text-4xl font-bold sm:text-5xl">
           Initiator
         </h2>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,33%)] lg:justify-center">
           {INITIATOR_PROFILES.map((profile) => (
             <Card key={profile.name} profile={profile} />
           ))}
