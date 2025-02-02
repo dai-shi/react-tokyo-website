@@ -1,12 +1,6 @@
 import { Link } from 'waku';
 import { JoinDiscordServer } from './joinDiscordServer';
 
-// TODO: 関数化？
-// const menuPaths: Extract<RouteConfig['paths'], '/ourTeams'>[] = ['/ourTeams'];
-// const getStaticPaths = async () => {
-//   return ['/ourTeams'];
-// };
-
 export const Header = () => {
   return (
     <header className="z-10 flex w-full items-start justify-between bg-white/80 p-6 backdrop-blur-md sm:items-center lg:fixed lg:left-0 lg:top-0">

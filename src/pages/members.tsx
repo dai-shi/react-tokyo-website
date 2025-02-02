@@ -1,9 +1,9 @@
-import { Card } from '../../components/members/card';
-import { Head } from '../../components/head';
+import { Head } from '../components/head';
+import { Card } from '../components/members/card';
 import {
   INITIATOR_PROFILES,
   SUPPORTER_PROFILES,
-} from '../../components/members/memberProfiles';
+} from '../components/members/memberProfiles';
 
 export default async function MembersPage() {
   return (
