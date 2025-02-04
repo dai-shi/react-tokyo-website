@@ -2,7 +2,7 @@ import { Link } from 'waku';
 
 export const Footer = () => {
   return (
-    <footer className="p-6 lg:fixed lg:bottom-0 lg:right-0">
+    <footer className="p-6 lg:fixed lg:right-0 lg:bottom-0">
       <div className="flex flex-row justify-end space-x-6">
         <Link
           className="text-sm font-semibold text-gray-500"

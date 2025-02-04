@@ -16,7 +16,7 @@ export default async function HomePage() {
           </div>
         </div>
         <div className="order-2 flex flex-col items-start justify-center py-6 lg:order-1 lg:col-span-2">
-          <h1 className="break-keep text-2xl font-bold tracking-tight lg:text-4xl">
+          <h1 className="text-2xl font-bold tracking-tight break-keep lg:text-4xl">
             分からないを分かち合う、
             <wbr />
             広げようReactの世界。

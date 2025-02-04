@@ -12,7 +12,7 @@ export const OnlineExchange = () => {
       <div className="absolute bottom-[-105px] left-[-140px] w-[300px] rotate-[100deg] select-none lg:bottom-[-125px] lg:left-[-290px] lg:w-[680px]">
         <img src="/images/react-logo-pink.svg" alt="" />
       </div>
-      <div className="absolute right-[-150px] top-[-150px] w-[300px] rotate-[45deg] select-none lg:right-[-310px] lg:top-[-240px] lg:w-[680px]">
+      <div className="absolute top-[-150px] right-[-150px] w-[300px] rotate-[45deg] select-none lg:top-[-240px] lg:right-[-310px] lg:w-[680px]">
         <img src="/images/react-logo-pink.svg" alt="" />
       </div>
       <div className="relative space-y-4 lg:space-y-8">
