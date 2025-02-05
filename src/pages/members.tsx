@@ -15,7 +15,7 @@ export default async function MembersPage() {
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,33%)] lg:justify-center">
           {INITIATOR_PROFILES.map((profile) => (
-            <Card key={profile.name} profile={profile} />
+            <Card key={profile.key} profile={profile} />
           ))}
         </div>
       </div>
@@ -25,7 +25,7 @@ export default async function MembersPage() {
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SUPPORTER_PROFILES.map((profile) => (
-            <Card key={profile.name} profile={profile} />
+            <Card key={profile.key} profile={profile} />
           ))}
         </div>
       </div>
