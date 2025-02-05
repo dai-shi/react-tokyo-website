@@ -11,11 +11,11 @@ export const Card = ({ profile }: { profile: Profile }) => {
         src={profile.imageUrl}
         alt={profile.name}
       />
-      <h3 className="break-keep text-xl font-bold lg:text-2xl">
+      <h3 className="text-xl font-bold break-keep lg:text-2xl">
         {profile.name}
       </h3>
       {profile.description && (
-        <p className="max-w-72 break-keep text-center">{profile.description}</p>
+        <p className="max-w-72 text-center break-keep">{profile.description}</p>
       )}
       {profile.xUrl && (
         <a

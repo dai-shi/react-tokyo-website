@@ -1,7 +1,7 @@
 export default async function CodeOfConductPage() {
   return (
     <div className="mx-auto max-w-3xl text-gray-900 lg:pt-40">
-      <h1 className="break-keep py-8 text-2xl font-bold tracking-tight lg:py-14 lg:text-4xl">
+      <h1 className="py-8 text-2xl font-bold tracking-tight break-keep lg:py-14 lg:text-4xl">
         行動規範 (Code of Conduct)
       </h1>
       <div className="py-4 lg:py-6">
