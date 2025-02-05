@@ -21,7 +21,8 @@ export const INITIATOR_PROFILES: Profile[] = [
     imageUrl:
       'https://pbs.twimg.com/profile_images/1405036980690247684/A-Q3iOjM_400x400.jpg',
     name: 'Teruhisa Yamamoto',
-    description: '',
+    description:
+      'React中心のフロントエンド開発に従事。クライアント寄りのアプリ開発が好み。現在警備ロボット開発のチームに参画中。React Tokyoメンバーのより良い 交流の場を提供できるよう頑張ります！',
     xUrl: 'https://x.com/t6adev',
   },
 ];
