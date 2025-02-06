@@ -15,7 +15,9 @@ export const Card = ({ profile }: { profile: Profile }) => {
         {profile.name}
       </h3>
       {profile.description && (
-        <p className="max-w-72 text-center break-keep">{profile.description}</p>
+        <p className="max-w-72 text-center leading-relaxed break-all">
+          {profile.description}
+        </p>
       )}
       {profile.xUrl && (
         <a
