@@ -53,19 +53,19 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="relative z-10 flex w-full items-start justify-between p-6 sm:items-center lg:fixed lg:left-0 lg:top-0">
+    <header className="relative z-10 flex w-full items-start justify-between p-6 sm:items-center lg:fixed lg:top-0 lg:left-0">
       <div
         aria-hidden
         onClick={closeSpMenu}
         className={clsx(
-          'absolute left-0 top-0 h-screen w-screen cursor-default bg-white/40 backdrop-blur-xl transition-opacity duration-200 lg:hidden',
+          'absolute top-0 left-0 h-screen w-screen cursor-default bg-white/40 backdrop-blur-xl transition-opacity duration-200 lg:hidden',
           {
             'opacity-100': expanded,
             'pointer-events-none opacity-0': !expanded,
           },
         )}
       />
-      <div className="absolute left-0 top-0 h-full w-full bg-white lg:bg-white/80 lg:backdrop-blur-md" />
+      <div className="absolute top-0 left-0 h-full w-full bg-white lg:bg-white/80 lg:backdrop-blur-md" />
       <div className="relative flex flex-col gap-2 sm:flex-row sm:items-end sm:gap-4">
         <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
           <Link to="/" onClick={path === '/' ? closeSpMenu : undefined}>
@@ -123,7 +123,7 @@ export const Header = () => {
         id="sp-menu"
         data-expanded={expanded}
         className={clsx(
-          'absolute left-0 top-full w-full bg-white px-6 pb-6 transition-opacity duration-200 lg:hidden',
+          'absolute top-full left-0 w-full bg-white px-6 pb-6 transition-opacity duration-200 lg:hidden',
           {
             'opacity-100': expanded,
             'invisible opacity-0': !expanded,
