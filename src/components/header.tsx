@@ -93,7 +93,7 @@ export const Header = () => {
         <button
           onClick={menuClick}
           type="button"
-          aria-label={buttonLabel}
+          aria-label={expanded ? 'メニューを閉じる' : 'メニューを開く'}
           aria-expanded={expanded}
           className="flex h-6 w-6 flex-col justify-between lg:hidden"
         >
