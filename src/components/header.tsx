@@ -22,7 +22,6 @@ const HEADER_MENUS: { path: RouteConfig['paths']; label: string }[] = [
 ] as const;
 
 export const Header = () => {
-  const [buttonLabel, setButtonLabel] = useState<string>('メニューを開く');
   const [expanded, setExpanded] = useState<boolean>(false);
   const { path } = useRouter();
 
@@ -33,10 +32,6 @@ export const Header = () => {
   const closeSpMenu = () => {
     setExpanded(false);
   };
-
-  useEffect(() => {
-    setButtonLabel(expanded ? 'メニューを閉じる' : 'メニューを開く');
-  }, [expanded]);
 
   useEffect(() => {
     closeSpMenu();
@@ -62,7 +57,7 @@ export const Header = () => {
         aria-hidden
         onClick={closeSpMenu}
         className={clsx(
-          'absolute top-0 left-0 h-screen w-screen cursor-default bg-white/40 backdrop-blur-xl transition-opacity duration-200 lg:hidden',
+          'absolute top-0 left-0 h-screen w-screen cursor-default bg-black/80 transition-opacity duration-200 lg:hidden',
           {
             'opacity-100': expanded,
             'pointer-events-none opacity-0': !expanded,
@@ -91,7 +86,7 @@ export const Header = () => {
         </nav>
         <JoinDiscordServer isHeader />
         <button
-          onClick={menuClick}
+          onClick={toggleSpMenu}
           type="button"
           aria-label={expanded ? 'メニューを閉じる' : 'メニューを開く'}
           aria-expanded={expanded}
