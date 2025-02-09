@@ -26,7 +26,7 @@ export const Header = () => {
   const [expanded, setExpanded] = useState<boolean>(false);
   const { path } = useRouter();
 
-  const menuClick = () => {
+  const toggleSpMenu = () => {
     setExpanded(!expanded);
   };
 
