@@ -81,9 +81,7 @@ export default async function SponsorsPage() {
                 <span className="font-semibold">ブランドの認知向上</span>
               </h4>
               <ul className="list-disc space-y-3 px-2.5">
-                <li>
-                  HPにてロゴ掲載（1年間、ゴールドスポンサーはトップページにも掲載）
-                </li>
+                <li>HPにて1年間ロゴ掲載</li>
                 <li>イベント時のスライドにてロゴ掲載・紹介</li>
               </ul>
             </div>
@@ -99,7 +97,7 @@ export default async function SponsorsPage() {
                 <li>
                   Reactエンジニア・デザイナー・学生など、多様な層へのPRが可能
                 </li>
-                <li>イベントやDiscordを通じた直接の交流機会</li>
+                <li>イベントやDiscordを通じた交流機会</li>
               </ul>
             </div>
 
@@ -132,7 +130,7 @@ export default async function SponsorsPage() {
               <p>
                 コミュニティスポンサーとは、React
                 Tokyoコミュニティを年間通してご支援して頂くスポンサー枠です。
-                頂いた協賛金に対して、ささやかながら以下のお礼をご用意いたしております。
+                ご支援への感謝の気持ちを込めて、以下の特典をご用意しております。
               </p>
             </div>
 
@@ -140,7 +138,7 @@ export default async function SponsorsPage() {
               <div className="space-y-4 rounded-lg border-2 border-yellow-500 p-5 lg:p-10">
                 <div className="space-y-2 lg:self-center">
                   <h4 className="text-xl font-bold lg:text-3xl">
-                    ゴールドスポンサー
+                    Goldスポンサー
                   </h4>
                   <p>
                     <span className="mr-1 text-4xl font-semibold lg:text-6xl">
@@ -162,7 +160,7 @@ export default async function SponsorsPage() {
               <div className="space-y-4 rounded-lg border-2 border-zinc-500 p-5 lg:p-10">
                 <div className="space-y-2 lg:self-center">
                   <h4 className="text-xl font-bold lg:text-3xl">
-                    シルバースポンサー
+                    Silverスポンサー
                   </h4>
                   <p>
                     <span className="mr-1 text-4xl font-semibold lg:text-6xl">
@@ -183,7 +181,7 @@ export default async function SponsorsPage() {
               <div className="space-y-4 rounded-lg border-2 border-amber-700 p-5 lg:p-10">
                 <div className="space-y-2">
                   <h4 className="text-xl font-bold lg:text-3xl">
-                    ブロンズスポンサー
+                    Bronzeスポンサー
                   </h4>
                   <p>
                     <span className="mr-1 text-4xl font-semibold lg:text-6xl">
@@ -218,7 +216,7 @@ export default async function SponsorsPage() {
                   こちら
                 </a>
                 を御覧ください。
-                ご支援頂いたお礼として、ささやかながら以下のお礼をご用意いたしております。
+                ご支援への感謝の気持ちを込めて、以下の特典をご用意しております。
               </p>
             </div>
 
