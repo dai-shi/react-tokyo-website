@@ -16,6 +16,9 @@ export const Header = () => {
             <li>
               <Link to="/members">Members</Link>
             </li>
+            <li>
+              <Link to="/sponsors">Sponsors</Link>
+            </li>
           </ul>
         </nav>
       </div>
