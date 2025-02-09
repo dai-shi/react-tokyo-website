@@ -15,6 +15,10 @@ const HEADER_MENUS: { path: RouteConfig['paths']; label: string }[] = [
     path: '/members',
     label: 'Members',
   },
+  {
+    path: '/sponsors',
+    label: 'Sponsors',
+  },
 ] as const;
 
 export const Header = () => {
