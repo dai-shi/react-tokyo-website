@@ -74,44 +74,79 @@ export default async function SponsorsPage() {
 
         <div className="space-y-4">
           <h3 className="text-xl font-bold">スポンサーのメリット</h3>
-          <div className="space-y-10 rounded-lg border-2 border-gray-400 p-8">
-            <div className="space-y-5">
-              <h4 className="ml-[-10px] flex items-center">
-                <span className='h-[50px] w-[50px] shrink-0 bg-[#00dd34] [mask-image:url("/images/sponsors/premium.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
-                <span className="font-semibold">ブランドの認知向上</span>
-              </h4>
-              <ul className="list-disc space-y-3 px-2.5">
-                <li>HPにて1年間ロゴ掲載</li>
-                <li>イベント時のスライドにてロゴ掲載・紹介</li>
-              </ul>
+          <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+            <div className="space-y-10 rounded-lg bg-gray-100 p-8">
+              <div className="space-y-5">
+                <h4 className="ml-[-10px] flex items-center">
+                  <span className='h-[50px] w-[50px] shrink-0 bg-[#00dd34] [mask-image:url("/images/sponsors/premium.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
+                  <span className="font-semibold">ブランドの認知向上</span>
+                </h4>
+                <ul className="list-disc space-y-3 px-2.5">
+                  <li>HPにて1年間ロゴ掲載</li>
+                  <li>イベント時のスライドにてロゴ掲載・紹介</li>
+                </ul>
+              </div>
+
+              <div className="space-y-5">
+                <h4 className="ml-[-9px] flex items-center gap-1.5">
+                  <span className='h-[45px] w-[45px] shrink-0 bg-[#28d942] [mask-image:url("/images/sponsors/handshake.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
+                  <span className="mt-1 font-semibold">
+                    ターゲット層への直接的なアプローチ
+                  </span>
+                </h4>
+                <ul className="list-disc space-y-3 px-2.5">
+                  <li>
+                    Reactエンジニア・デザイナー・学生など、多様な層へのPRが可能
+                  </li>
+                  <li>イベントやDiscordを通じた交流機会</li>
+                </ul>
+              </div>
+
+              <div className="space-y-5">
+                <h4 className="ml-[-9px] flex items-center gap-2">
+                  <span className='h-[45px] w-[45px] shrink-0 bg-[#28d942] [mask-image:url("/images/sponsors/heart.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
+                  <span className="mt-1 font-semibold break-all">
+                    コミュニティへの貢献を通じた企業イメージ向上
+                  </span>
+                </h4>
+                <ul className="list-disc space-y-3 px-2.5">
+                  <li>ITコミュニティの発展を支援する企業としての認知</li>
+                  <li>採用活動やブランディングにも活用可能</li>
+                </ul>
+              </div>
             </div>
 
-            <div className="space-y-5">
-              <h4 className="ml-[-9px] flex items-center gap-1.5">
-                <span className='h-[45px] w-[45px] shrink-0 bg-[#00dd34] [mask-image:url("/images/sponsors/handshake.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
-                <span className="mt-1 font-semibold">
-                  ターゲット層への直接的なアプローチ
-                </span>
-              </h4>
-              <ul className="list-disc space-y-3 px-2.5">
-                <li>
-                  Reactエンジニア・デザイナー・学生など、多様な層へのPRが可能
-                </li>
-                <li>イベントやDiscordを通じた交流機会</li>
-              </ul>
-            </div>
-
-            <div className="space-y-5">
-              <h4 className="ml-[-9px] flex items-center gap-2">
-                <span className='h-[45px] w-[45px] shrink-0 bg-[#00dd34] [mask-image:url("/images/sponsors/heart.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
-                <span className="mt-1 font-semibold break-all">
-                  コミュニティへの貢献を通じた企業イメージ向上
-                </span>
-              </h4>
-              <ul className="list-disc space-y-3 px-2.5">
-                <li>ITコミュニティの発展を支援する企業としての認知</li>
-                <li>採用活動やブランディングにも活用可能</li>
-              </ul>
+            <div className="space-y-10 rounded-lg bg-gray-100 p-8">
+              <div className="space-y-5">
+                <h4 className="ml-[-11px] flex items-center gap-1.5">
+                  <span className='h-[48px] w-[48px] shrink-0 bg-[#28d942] [mask-image:url("/images/sponsors/monitoring.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
+                  <span className="font-semibold">これまでの実績</span>
+                </h4>
+                <ul className="space-y-8">
+                  <li className="space-y-5">
+                    <p>累計イベント参加人数（参加希望含む）</p>
+                    <p className="flex items-end text-6xl font-semibold">
+                      <span>176</span>
+                      <span className='mb-[5px] ml-[-8px] h-[45px] w-[45px] bg-[#a5a5a5] [mask-image:url("/images/sponsors/person.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
+                    </p>
+                  </li>
+                  <li className="space-y-2">
+                    <p>開催イベント数</p>
+                    <p className="flex items-end text-6xl font-semibold">
+                      <span>2</span>
+                      <span className='mb-[5px] ml-[-3px] h-[36px] w-[36px] bg-[#a5a5a5] [mask-image:url("/images/sponsors/flag.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
+                    </p>
+                  </li>
+                  <li className="space-y-2">
+                    <p>Discord参加人数</p>
+                    <p className="flex items-end text-6xl font-semibold">
+                      <span>854</span>
+                      <span className='mb-[5px] ml-[-8px] h-[45px] w-[45px] bg-[#a5a5a5] [mask-image:url("/images/sponsors/person.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
+                    </p>
+                  </li>
+                </ul>
+                <small>*2025年2月現在</small>
+              </div>
             </div>
           </div>
         </div>
