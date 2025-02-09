@@ -75,7 +75,7 @@ export default async function SponsorsPage() {
         <div className="space-y-4">
           <h3 className="text-xl font-bold">スポンサーのメリット</h3>
           <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
-            <div className="space-y-10 rounded-lg bg-gray-100 p-8">
+            <div className="space-y-10 rounded-lg bg-stone-100 p-8">
               <div className="space-y-5">
                 <h4 className="ml-[-10px] flex items-center">
                   <span className='h-[50px] w-[50px] shrink-0 bg-[#00dd34] [mask-image:url("/images/sponsors/premium.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
@@ -116,7 +116,7 @@ export default async function SponsorsPage() {
               </div>
             </div>
 
-            <div className="space-y-10 rounded-lg bg-gray-100 p-8">
+            <div className="space-y-10 rounded-lg bg-stone-100 p-8">
               <div className="space-y-5">
                 <h4 className="ml-[-11px] flex items-center gap-1.5">
                   <span className='h-[48px] w-[48px] shrink-0 bg-[#28d942] [mask-image:url("/images/sponsors/monitoring.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover]'></span>
@@ -169,8 +169,8 @@ export default async function SponsorsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-              <div className="space-y-4 rounded-lg border-2 border-yellow-500 p-5 lg:p-10">
+            <div className="grid grid-cols-1 gap-3 text-black lg:grid-cols-3">
+              <div className="space-y-4 rounded-lg bg-yellow-500/15 p-5 lg:p-10">
                 <div className="space-y-2 lg:self-center">
                   <h4 className="text-xl font-bold lg:text-3xl">
                     Goldスポンサー
@@ -192,7 +192,7 @@ export default async function SponsorsPage() {
                 </ul>
               </div>
 
-              <div className="space-y-4 rounded-lg border-2 border-zinc-500 p-5 lg:p-10">
+              <div className="space-y-4 rounded-lg bg-zinc-500/20 p-5 lg:p-10">
                 <div className="space-y-2 lg:self-center">
                   <h4 className="text-xl font-bold lg:text-3xl">
                     Silverスポンサー
@@ -213,7 +213,7 @@ export default async function SponsorsPage() {
                 </ul>
               </div>
 
-              <div className="space-y-4 rounded-lg border-2 border-amber-700 p-5 lg:p-10">
+              <div className="space-y-4 rounded-lg bg-amber-700/15 p-5 lg:p-10">
                 <div className="space-y-2">
                   <h4 className="text-xl font-bold lg:text-3xl">
                     Bronzeスポンサー
@@ -256,7 +256,7 @@ export default async function SponsorsPage() {
             </div>
 
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-              <div className="space-y-4 rounded-lg border-2 border-gray-400 p-5 lg:p-10">
+              <div className="space-y-4 rounded-lg bg-stone-100 p-5 lg:p-10">
                 <div className="space-y-2">
                   <h4 className="text-xl font-bold lg:text-3xl">
                     会場スポンサー
@@ -269,7 +269,7 @@ export default async function SponsorsPage() {
                 </ul>
               </div>
 
-              <div className="space-y-4 rounded-lg border-2 border-gray-400 p-5 lg:p-10">
+              <div className="space-y-4 rounded-lg bg-stone-100 p-5 lg:p-10">
                 <div className="space-y-2">
                   <h4 className="text-xl font-bold lg:text-3xl">
                     飲食スポンサー
