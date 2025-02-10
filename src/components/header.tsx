@@ -1,9 +1,9 @@
 'use client';
 
-import { Link, useRouter_UNSTABLE as useRouter } from 'waku';
+import { Link } from 'waku';
 import { JoinDiscordServer } from './joinDiscordServer';
 import { RouteConfig } from 'waku/router';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { clsx } from 'clsx';
 
 const HEADER_MENUS: { path: RouteConfig['paths']; label: string }[] = [
@@ -23,19 +23,19 @@ const HEADER_MENUS: { path: RouteConfig['paths']; label: string }[] = [
 
 export const Header = () => {
   const [expanded, setExpanded] = useState<boolean>(false);
-  const { path } = useRouter();
+  const [, startTransition] = useTransition();
 
   const toggleSpMenu = () => {
-    setExpanded(!expanded);
+    startTransition(() => {
+      setExpanded(!expanded);
+    });
   };
 
   const closeSpMenu = () => {
-    setExpanded(false);
+    startTransition(() => {
+      setExpanded(false);
+    });
   };
-
-  useEffect(() => {
-    closeSpMenu();
-  }, [path]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -67,7 +67,7 @@ export const Header = () => {
       <div className="absolute top-0 left-0 h-full w-full bg-white lg:bg-white/80 lg:backdrop-blur-md" />
       <div className="relative flex flex-col gap-2 sm:flex-row sm:items-end sm:gap-4">
         <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
-          <Link to="/" onClick={path === '/' ? closeSpMenu : undefined}>
+          <Link to="/" onClick={closeSpMenu}>
             React Tokyo
           </Link>
         </h2>
@@ -134,7 +134,7 @@ export const Header = () => {
             <li key={menu.path}>
               <Link
                 to={menu.path}
-                onClick={path === menu.path ? closeSpMenu : undefined}
+                onClick={closeSpMenu}
                 className="block py-4 text-xl font-bold"
               >
                 {menu.label}
