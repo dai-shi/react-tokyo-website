@@ -11,7 +11,7 @@ export default async function MembersPage() {
       <Head title="Members - React Tokyo" />
       <div className="space-y-6">
         <h2 className="text-center text-4xl font-bold sm:text-5xl">
-          Initiator
+          Initiators
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,33%)] lg:justify-center">
           {INITIATOR_PROFILES.map((profile) => (
@@ -21,7 +21,7 @@ export default async function MembersPage() {
       </div>
       <div className="space-y-6">
         <h2 className="text-center text-4xl font-bold sm:text-5xl">
-          Support team
+          Collaborators
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,33%)] lg:justify-center">
           {SUPPORTER_PROFILES.map((profile) => (
