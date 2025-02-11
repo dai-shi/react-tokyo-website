@@ -23,7 +23,7 @@ export default async function MembersPage() {
         <h2 className="text-center text-4xl font-bold sm:text-5xl">
           Collaborators
         </h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,33%)] lg:justify-center">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:justify-center">
           {COLLABORATOR_PROFILES.map((profile) => (
             <Card key={profile.key} profile={profile} />
           ))}

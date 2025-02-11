@@ -15,9 +15,14 @@ export const Card = ({ profile }: { profile: Profile }) => {
         {profile.name}
       </h3>
       {profile.description && (
-        <p className="max-w-72 text-center leading-relaxed break-all">
-          {profile.description}
-        </p>
+        <div className="max-w-72 text-center text-xs leading-relaxed lg:text-base">
+          {profile.description.map((item, index) => (
+            <>
+              {index > 0 && <br />}
+              {item}
+            </>
+          ))}
+        </div>
       )}
       {profile.xUrl && (
         <a
