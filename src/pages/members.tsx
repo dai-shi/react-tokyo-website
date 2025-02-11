@@ -2,7 +2,7 @@ import { Head } from '../components/head';
 import { Card } from '../components/members/card';
 import {
   INITIATOR_PROFILES,
-  SUPPORTER_PROFILES,
+  COLLABORATOR_PROFILES,
 } from '../components/members/memberProfiles';
 
 export default async function MembersPage() {
@@ -24,7 +24,7 @@ export default async function MembersPage() {
           Collaborators
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,33%)] lg:justify-center">
-          {SUPPORTER_PROFILES.map((profile) => (
+          {COLLABORATOR_PROFILES.map((profile) => (
             <Card key={profile.key} profile={profile} />
           ))}
         </div>
