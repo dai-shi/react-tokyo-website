@@ -20,7 +20,7 @@ export default async function RootElement({
           src="https://www.googletagmanager.com/gtag/js?id=G-VQNGS1YC35"
         ></script>
       </head>
-      <body>
+      <body className="has-[#sp-menu[data-expanded='true']]:overflow-hidden">
         <script>{code}</script>
         {children}
       </body>

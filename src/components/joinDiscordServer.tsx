@@ -29,13 +29,5 @@ export const JoinDiscordServer = ({
     >
       Join Discord Server
     </span>
-    <span
-      className={clsx('text-white', {
-        'block text-sm sm:hidden': isHeader,
-        hidden: !isHeader,
-      })}
-    >
-      Join Us
-    </span>
   </a>
 );
