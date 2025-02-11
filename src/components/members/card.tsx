@@ -14,12 +14,12 @@ export const Card = ({ profile }: { profile: Profile }) => {
       <h3 className="text-xl font-bold break-keep lg:text-2xl">
         {profile.name}
       </h3>
-      {profile.description && (
+      {profile.descriptions && (
         <div className="max-w-72 text-center text-xs leading-relaxed lg:text-base">
-          {profile.description.map((item, index) => (
+          {profile.descriptions.map((description, index) => (
             <>
               {index > 0 && <br />}
-              {item}
+              {description}
             </>
           ))}
         </div>
