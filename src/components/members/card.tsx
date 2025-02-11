@@ -15,7 +15,7 @@ export const Card = ({ profile }: { profile: Profile }) => {
         {profile.name}
       </h3>
       {profile.descriptions && (
-        <div className="max-w-72 text-center text-xs leading-relaxed lg:text-base">
+        <div className="max-w-72 text-center text-xs leading-relaxed break-all lg:text-base">
           {profile.descriptions.map((description, index) => (
             <>
               {index > 0 && <br />}
