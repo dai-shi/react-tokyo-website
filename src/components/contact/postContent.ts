@@ -11,7 +11,7 @@ const contactFormSchema: ZodType<ContactFormData> = z.object({
  * お問い合わせを送信するGASのURL
  */
 const POST_URL =
-  'https://script.google.com/macros/s/AKfycbwP15VbacUQd7BugG3vJGhpAbwhGTsYpDOeA7I8TNVWaCJJ4mb1hezjxQeF4isiPIMX/exec';
+  'https://script.google.com/macros/s/AKfycbx_PhpMikSi0FTzbDfhcpGwLXdTvFD-iZw2lZ99wANS2_aF2RQc7jNE7hwEofp5pEdY/exec';
 const POST_INPUT_NAMES = ['name', 'email', 'contents'] as const;
 type FormNames = keyof ContactFormData;
 
