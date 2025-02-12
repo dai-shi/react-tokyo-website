@@ -14,8 +14,15 @@ export const Card = ({ profile }: { profile: Profile }) => {
       <h3 className="text-xl font-bold break-keep lg:text-2xl">
         {profile.name}
       </h3>
-      {profile.description && (
-        <p className="max-w-72 text-center break-keep">{profile.description}</p>
+      {profile.descriptions && (
+        <div className="max-w-72 text-center text-xs leading-relaxed break-all lg:text-base">
+          {profile.descriptions.map((description, index) => (
+            <>
+              {index > 0 && <br />}
+              {description}
+            </>
+          ))}
+        </div>
       )}
       {profile.xUrl && (
         <a
