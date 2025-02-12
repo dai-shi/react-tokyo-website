@@ -64,7 +64,7 @@ export const Contact = () => {
         <button
           type="submit"
           disabled={isPending}
-          className="w-[150px] rounded-full bg-[#5865F2] p-2 text-white"
+          className="w-[150px] cursor-pointer rounded-full bg-[#5865F2] p-2 text-white"
         >
           {isPending ? '送信中...' : '送信'}
         </button>
