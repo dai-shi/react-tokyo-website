@@ -6,7 +6,7 @@ import { postContent } from './postContent';
 
 const initialState: ActionResponse = {
   success: false,
-  message: '',
+  message: [''],
 };
 
 export const ContactForm = () => {

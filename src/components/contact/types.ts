@@ -19,7 +19,7 @@ export type GASResponse = {
  */
 export type ActionResponse = {
   success: boolean;
-  message: string;
+  message: string[];
   inputs?: ContactFormData;
   errors?: {
     [K in keyof ContactFormData]?: string[];

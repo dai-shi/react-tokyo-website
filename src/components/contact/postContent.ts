@@ -11,7 +11,9 @@ const contactFormSchema: ZodType<ContactFormData> = z.object({
  * お問い合わせを送信するGASのURL
  */
 const POST_URL =
-  'https://script.google.com/macros/s/AKfycbx_PhpMikSi0FTzbDfhcpGwLXdTvFD-iZw2lZ99wANS2_aF2RQc7jNE7hwEofp5pEdY/exec';
+  // 本番用。終わったらこれに戻す
+  // 'https://script.google.com/macros/s/AKfycbx_PhpMikSi0FTzbDfhcpGwLXdTvFD-iZw2lZ99wANS2_aF2RQc7jNE7hwEofp5pEdY/exec';
+  'https://script.google.com/macros/s/AKfycbxF3UnLUavr7Rd4YcUzuJBAThLNAqpO5f0VlmAn7aPQguOQHzh2Qnss3wXquLpRyOd5y/exec';
 const POST_INPUT_NAMES = ['name', 'email', 'contents'] as const;
 type FormNames = keyof ContactFormData;
 
@@ -36,7 +38,7 @@ export const postContent = async (
   if (!validatedData.success) {
     return {
       success: false,
-      message: '誤りのある箇所を修正してください。',
+      message: ['誤りのある箇所を修正してください。'],
       errors: validatedData.error.flatten().fieldErrors,
       inputs: rawData,
     };
@@ -80,8 +82,9 @@ export const postContent = async (
 
     return {
       success: true,
-      message:
+      message: [
         'お問い合わせありがとうございます🎉担当者よりご連絡いたしますので、しばらくお待ちください。',
+      ],
       inputs: blankData,
     };
   } catch {
@@ -98,8 +101,12 @@ export const postContent = async (
 const failureResult = (inputs: ContactFormData) => {
   return {
     success: false,
-    message:
-      'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+    message: [
+      '何らかの問題が発生し、お問い合わせを送信できませんでした。',
+      '大変申し訳ございませんが、不具合報告をReact TokyoのDiscordサーバー内のご意見箱',
+      'もしくは公式アカウント(https://x.com/ReactTokyo)に',
+      'ご連絡くださいますようお願い申し上げます。',
+    ],
     inputs,
   };
 };
