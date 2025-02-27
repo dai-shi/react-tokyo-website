@@ -280,7 +280,17 @@ export default async function SponsorsPage() {
               <h4 className="text-xl font-bold">イベントスポンサー</h4>
               <p>
                 イベントスポンサーとは、React
-                Tokyoが開催するイベントの会場提供や飲食提供をご支援頂くスポンサー枠です。
+                Tokyoが開催するイベントへご支援頂くスポンサー枠です。
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <h5 className="text-lg font-bold">
+                会場提供スポンサー・飲食提供スポンサー
+              </h5>
+              <p>
+                イベントは主に都内で開催します。そのイベント毎に、会場や飲食提供に関するスポンサーを募集しています。
+                <br />
                 イベントの様子は
                 <a
                   className="underline decoration-sky-500 decoration-2"
@@ -292,34 +302,47 @@ export default async function SponsorsPage() {
                 <br />
                 ご支援への感謝の気持ちを込めて、以下の特典をご用意しております。
               </p>
+              <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+                <div className="space-y-6 rounded-lg bg-sky-50/60 px-5 py-8 lg:px-10 lg:py-12">
+                  <div className="space-y-2">
+                    <h5 className="text-2xl font-bold text-sky-900">
+                      会場スポンサー
+                    </h5>
+                  </div>
+                  <ul className="list-disc space-y-2 px-3 text-sm marker:text-sky-900 lg:text-base">
+                    <li>connpassイベントページにロゴ掲載</li>
+                    <li>イベント時の会社紹介トーク</li>
+                    <li>イベント時のノベルティ配布権利</li>
+                  </ul>
+                </div>
+
+                <div className="space-y-6 rounded-lg bg-sky-50/60 px-5 py-8 lg:px-10 lg:py-12">
+                  <div className="space-y-2">
+                    <h5 className="text-2xl font-bold text-sky-900">
+                      飲食スポンサー
+                    </h5>
+                  </div>
+                  <ul className="list-disc space-y-2 px-3 text-sm marker:text-sky-900 lg:text-base">
+                    <li>connpassイベントページにロゴ掲載</li>
+                    <li>イベント時の会社紹介トーク</li>
+                    <li>イベント時のノベルティ配布権利</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-              <div className="space-y-6 rounded-lg bg-sky-50/60 px-5 py-8 lg:px-10 lg:py-12">
-                <div className="space-y-2">
-                  <h5 className="text-2xl font-bold text-sky-900">
-                    会場スポンサー
-                  </h5>
-                </div>
-                <ul className="list-disc space-y-2 px-3 text-sm marker:text-sky-900 lg:text-base">
-                  <li>connpassイベントページにロゴ掲載</li>
-                  <li>イベント時の会社紹介トーク</li>
-                  <li>イベント時のノベルティ配布権利</li>
-                </ul>
-              </div>
-
-              <div className="space-y-6 rounded-lg bg-sky-50/60 px-5 py-8 lg:px-10 lg:py-12">
-                <div className="space-y-2">
-                  <h5 className="text-2xl font-bold text-sky-900">
-                    飲食スポンサー
-                  </h5>
-                </div>
-                <ul className="list-disc space-y-2 px-3 text-sm marker:text-sky-900 lg:text-base">
-                  <li>connpassイベントページにロゴ掲載</li>
-                  <li>イベント時の会社紹介トーク</li>
-                  <li>イベント時のノベルティ配布権利</li>
-                </ul>
-              </div>
+            <div className="space-y-6">
+              <h5 className="text-lg font-bold">地方開催スポンサー</h5>
+              <p>
+                React
+                Tokyoは現在、都内でミートアップを開催していますが、全国各地での開催にも挑戦したいと考えています。
+                <br />
+                そのため、地方開催に伴う費用を全面的にサポートいただけるスポンサー様を募集しております。
+                <br />
+                具体的な企画や進め方については、ご支援いただく企業様とともに最適な形を模索できればと考えています。
+                <br />
+                ご興味のある企業様は、ぜひお気軽にDiscordまたはフォームよりお問い合わせください。
+              </p>
             </div>
           </div>
         </div>
