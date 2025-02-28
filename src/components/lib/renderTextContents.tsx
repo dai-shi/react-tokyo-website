@@ -1,3 +1,5 @@
+import { Fragment } from 'react/jsx-runtime';
+
 /**
  * 文字列の配列を受け取り、それぞれJSXに変換して返す
  *
@@ -17,11 +19,19 @@ export const renderTextContents = (messages: string[]) => {
 
     message.replace(linkPattern, (match, linkText, linkUrl, offset) => {
       if (lastIndex < offset) {
-        converted.push(<span>{message.slice(lastIndex, offset)}</span>);
+        converted.push(
+          <Fragment key={lastIndex}>
+            {message.slice(lastIndex, offset)}
+          </Fragment>,
+        );
       }
 
       converted.push(
-        <a className="underline" href={linkUrl}>
+        <a
+          key={linkUrl}
+          className="underline decoration-red-500 decoration-2"
+          href={linkUrl}
+        >
           {linkText}
         </a>,
       );
@@ -31,14 +41,16 @@ export const renderTextContents = (messages: string[]) => {
     });
 
     if (lastIndex < message.length) {
-      converted.push(<span>{message.slice(lastIndex)}</span>);
+      converted.push(
+        <Fragment key={lastIndex}>{message.slice(lastIndex)}</Fragment>,
+      );
     }
 
     return (
-      <>
-        <span>{converted}</span>
+      <span key={index}>
+        {converted}
         {index < messages.length - 1 && <br />}
-      </>
+      </span>
     );
   });
 };
