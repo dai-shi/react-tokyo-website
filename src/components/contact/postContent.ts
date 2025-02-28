@@ -11,9 +11,7 @@ const contactFormSchema: ZodType<ContactFormData> = z.object({
  * お問い合わせを送信するGASのURL
  */
 const POST_URL =
-  // 本番用。終わったらこれに戻す
-  // 'https://script.google.com/macros/s/AKfycbx_PhpMikSi0FTzbDfhcpGwLXdTvFD-iZw2lZ99wANS2_aF2RQc7jNE7hwEofp5pEdY/exec';
-  'https://script.google.com/macros/s/AKfycbxF3UnLUavr7Rd4YcUzuJBAThLNAqpO5f0VlmAn7aPQguOQHzh2Qnss3wXquLpRyOd5y/exec';
+  'https://script.google.com/macros/s/AKfycbx_PhpMikSi0FTzbDfhcpGwLXdTvFD-iZw2lZ99wANS2_aF2RQc7jNE7hwEofp5pEdY/exec';
 const POST_INPUT_NAMES = ['name', 'email', 'contents'] as const;
 type FormNames = keyof ContactFormData;
 
@@ -102,10 +100,7 @@ const failureResult = (inputs: ContactFormData) => {
   return {
     success: false,
     message: [
-      '何らかの問題が発生し、お問い合わせを送信できませんでした。',
-      '大変申し訳ございませんが、不具合報告を',
-      '[React Tokyo Discordサーバー内のご意見箱](https://discord.gg/5B9jYpABUy)もしくは[公式アカウント](https://x.com/ReactTokyo)まで',
-      'ご連絡くださいますようお願い申し上げます。',
+      '何らかの問題が発生し、お問い合わせを送信できませんでした。大変申し訳ございませんが、不具合報告をReact Tokyo Discordサーバー内の[ご意見箱](https://discord.gg/5B9jYpABUy)、もしくは[公式アカウント](https://x.com/ReactTokyo)までご連絡くださいますようお願い申し上げます。',
     ],
     inputs,
   };
