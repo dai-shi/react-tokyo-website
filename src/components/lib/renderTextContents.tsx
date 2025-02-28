@@ -10,18 +10,18 @@ import { Fragment } from 'react/jsx-runtime';
  *
  * @param messages 文字列の配列
  */
-export const renderTextContents = (messages: string[]) => {
+export const renderTextContents = (contents: string[]) => {
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
 
-  return messages.map((message, index) => {
+  return contents.map((content, index) => {
     const converted = [];
     let lastIndex = 0;
 
-    message.replace(linkPattern, (match, linkText, linkUrl, offset) => {
+    content.replace(linkPattern, (match, linkText, linkUrl, offset) => {
       if (lastIndex < offset) {
         converted.push(
           <Fragment key={lastIndex}>
-            {message.slice(lastIndex, offset)}
+            {content.slice(lastIndex, offset)}
           </Fragment>,
         );
       }
@@ -40,16 +40,16 @@ export const renderTextContents = (messages: string[]) => {
       return match;
     });
 
-    if (lastIndex < message.length) {
+    if (lastIndex < content.length) {
       converted.push(
-        <Fragment key={lastIndex}>{message.slice(lastIndex)}</Fragment>,
+        <Fragment key={lastIndex}>{content.slice(lastIndex)}</Fragment>,
       );
     }
 
     return (
       <span key={index}>
         {converted}
-        {index < messages.length - 1 && <br />}
+        {index < contents.length - 1 && <br />}
       </span>
     );
   });
