@@ -2,7 +2,7 @@ import { z, ZodType } from 'zod';
 import { ActionResponse, ContactFormData, GASResponse } from './types';
 
 const contactFormSchema: ZodType<ContactFormData> = z.object({
-  name: z.string().min(1, '名前または会社名を入力してください。'),
+  name: z.string().min(1, 'お名前または会社名を入力してください。'),
   email: z.string().min(1, 'メールアドレスを入力してください。'),
   contents: z.string().min(1, 'お問い合わせ内容を入力してください。'),
 });
@@ -103,8 +103,8 @@ const failureResult = (inputs: ContactFormData) => {
     success: false,
     message: [
       '何らかの問題が発生し、お問い合わせを送信できませんでした。',
-      '大変申し訳ございませんが、不具合報告をReact TokyoのDiscordサーバー内のご意見箱',
-      'もしくは公式アカウント(https://x.com/ReactTokyo)に',
+      '大変申し訳ございませんが、不具合報告を',
+      '[React Tokyo Discordサーバー内のご意見箱](https://discord.gg/5B9jYpABUy)もしくは[公式アカウント](https://x.com/ReactTokyo)まで',
       'ご連絡くださいますようお願い申し上げます。',
     ],
     inputs,

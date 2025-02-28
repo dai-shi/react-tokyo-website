@@ -3,6 +3,7 @@
 import { useActionState } from 'react';
 import { ActionResponse } from './types';
 import { postContent } from './postContent';
+import { renderTextContents } from '../lib/renderTextContents';
 
 const initialState: ActionResponse = {
   success: false,
@@ -15,7 +16,8 @@ export const ContactForm = () => {
   return (
     <form action={action} className="relative grid max-w-[480px] gap-7">
       <label htmlFor="name" className="block space-y-1">
-        お名前<span className="ml-2 text-sm text-[#F45554]">*必須</span>
+        お名前
+        <span className="ml-2 text-sm text-[#F45554]">*必須</span>
         <input
           type="text"
           name="name"
@@ -24,9 +26,7 @@ export const ContactForm = () => {
           className="w-full rounded-md bg-slate-200 p-2 leading-6"
         />
         {state?.errors?.name && (
-          <p id="streetAddress-error" className="text-sm text-red-500">
-            {state.errors.name[0]}
-          </p>
+          <p className="text-sm text-red-500">{state.errors.name[0]}</p>
         )}
       </label>
       <label htmlFor="email" className="block space-y-1">
@@ -40,9 +40,7 @@ export const ContactForm = () => {
           className="w-full rounded-md bg-slate-200 p-2 leading-6"
         />
         {state?.errors?.email && (
-          <p id="streetAddress-error" className="text-sm text-red-500">
-            {state.errors.email[0]}
-          </p>
+          <p className="text-sm text-red-500">{state.errors.email[0]}</p>
         )}
       </label>
       <label htmlFor="contents" className="block space-y-1">
@@ -55,9 +53,7 @@ export const ContactForm = () => {
           className="min-h-[250px] w-full rounded-md bg-slate-200 p-2 leading-6"
         ></textarea>
         {state?.errors?.contents && (
-          <p id="streetAddress-error" className="text-sm text-red-500">
-            {state.errors.contents[0]}
-          </p>
+          <p className="text-sm text-red-500">{state.errors.contents[0]}</p>
         )}
       </label>
       <button
@@ -67,7 +63,11 @@ export const ContactForm = () => {
       >
         {isPending ? '送信中...' : '送信'}
       </button>
-      {state.message && <p className="text-lg">{state.message}</p>}
+      {state.message && (
+        <p className="text-sm leading-relaxed">
+          {renderTextContents(state.message)}
+        </p>
+      )}
     </form>
   );
 };
