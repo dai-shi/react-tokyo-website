@@ -21,11 +21,12 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-server-dom-webpack": "19.0.0",
-    "waku": "0.21.21",
+    "waku": "0.21.22",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@tailwindcss/postcss": "^4.0.9",
     "@tailwindcss/vite": "4.0.9",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
@@ -37,6 +38,7 @@
     "eslint-plugin-react-compiler": "19.0.0-beta-63e3235-20250105",
     "eslint-plugin-react-hooks": "^5.1.0",
     "open-graph-scraper": "^6.8.3",
+    "postcss": "^8.5.3",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.9",
