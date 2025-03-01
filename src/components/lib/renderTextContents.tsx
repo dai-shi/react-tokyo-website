@@ -27,11 +27,7 @@ export const renderTextContents = (contents: string[]) => {
       }
 
       converted.push(
-        <a
-          key={linkUrl}
-          className="underline decoration-red-500 decoration-2"
-          href={linkUrl}
-        >
+        <a key={linkUrl} className="underline" href={linkUrl}>
           {linkText}
         </a>,
       );

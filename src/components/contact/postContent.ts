@@ -100,7 +100,7 @@ const failureResult = (inputs: ContactFormData) => {
   return {
     success: false,
     message: [
-      '何らかの問題が発生し、お問い合わせを送信できませんでした。大変申し訳ございませんが、不具合報告をReact Tokyo Discordサーバー内の[ご意見箱](https://discord.gg/5B9jYpABUy)、もしくは[公式アカウント](https://x.com/ReactTokyo)までご連絡くださいますようお願い申し上げます。',
+      '何らかの問題が発生し、お問い合わせを送信できませんでした。大変申し訳ございませんが、不具合報告をReact Tokyo Discordサーバー内の[ご意見箱](https://discord.gg/5B9jYpABUy)、もしくは[公式Xアカウント](https://x.com/ReactTokyo)までご連絡くださいますようお願い申し上げます。',
     ],
     inputs,
   };
