@@ -5,7 +5,7 @@ import {
   ChartNoAxesCombined,
 } from 'lucide-react';
 
-import { Contact } from '../components/contact/contact';
+import { ContactForm } from '../components/contact/contactForm';
 
 export default async function SponsorsPage() {
   return (
@@ -354,7 +354,7 @@ export default async function SponsorsPage() {
           <br />
           ご興味のある企業様は、ぜひお気軽にDiscordまたはフォームからお問い合わせください。
         </p>
-        <Contact />
+        <ContactForm />
       </div>
     </section>
   );

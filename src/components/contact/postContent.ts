@@ -2,7 +2,7 @@ import { z, ZodType } from 'zod';
 import { ActionResponse, ContactFormData, GASResponse } from './types';
 
 const contactFormSchema: ZodType<ContactFormData> = z.object({
-  name: z.string().min(1, '名前または会社名を入力してください。'),
+  name: z.string().min(1, 'お名前または会社名を入力してください。'),
   email: z.string().min(1, 'メールアドレスを入力してください。'),
   contents: z.string().min(1, 'お問い合わせ内容を入力してください。'),
 });
@@ -36,7 +36,7 @@ export const postContent = async (
   if (!validatedData.success) {
     return {
       success: false,
-      message: '誤りのある箇所を修正してください。',
+      message: ['誤りのある箇所を修正してください。'],
       errors: validatedData.error.flatten().fieldErrors,
       inputs: rawData,
     };
@@ -80,8 +80,9 @@ export const postContent = async (
 
     return {
       success: true,
-      message:
+      message: [
         'お問い合わせありがとうございます🎉担当者よりご連絡いたしますので、しばらくお待ちください。',
+      ],
       inputs: blankData,
     };
   } catch {
@@ -98,8 +99,9 @@ export const postContent = async (
 const failureResult = (inputs: ContactFormData) => {
   return {
     success: false,
-    message:
-      'お問い合わせを送信できませんでした。申し訳ございませんがしばらく時間を置いてから再度お試しください。',
+    message: [
+      '何らかの問題が発生し、お問い合わせを送信できませんでした。大変申し訳ございませんが、不具合報告をReact Tokyo Discordサーバー内の[ご意見箱](https://discord.gg/5B9jYpABUy)、もしくは[公式Xアカウント](https://x.com/ReactTokyo)までご連絡くださいますようお願い申し上げます。',
+    ],
     inputs,
   };
 };
