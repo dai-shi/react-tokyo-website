@@ -27,7 +27,13 @@ export const renderTextContents = (contents: string[]) => {
       }
 
       converted.push(
-        <a key={linkUrl} className="underline" href={linkUrl}>
+        <a
+          key={linkUrl}
+          href={linkUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
           {linkText}
         </a>,
       );

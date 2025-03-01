@@ -117,4 +117,57 @@ export const COLLABORATOR_PROFILES: Profile[] = [
     ],
     xUrl: 'https://x.com/aTakatoNakamura',
   },
+  {
+    key: 7,
+    imageUrl:
+      'https://pbs.twimg.com/profile_images/1591307647617155073/60s_fx_K_400x400.png',
+    name: 'akfm_sato(あっきー)',
+    descriptions: [
+      'Next.jsの話をよくZennで記事にしています。Rust、テスト、アジャイルが好きです。[「Next.jsの考え方」](https://zenn.dev/akfm/books/nextjs-basic-principle)を執筆。',
+    ],
+    xUrl: 'https://x.com/akfm_sato',
+  },
+  {
+    key: 8,
+    imageUrl: 'https://avatars.githubusercontent.com/u/81406938?v=4',
+    name: 'じょうげん',
+    descriptions: [
+      'Webエンジニア',
+      '趣味や業務でReactを使っています。バックエンドも書きますが、Reactは特に好きなライブラリです。可読性や保守性の高い設計を考え、より良いものにしていくことに喜びを感じます。一緒にReactの世界を楽しみましょう！',
+    ],
+    xUrl: 'https://x.com/j_ktwr',
+  },
+  {
+    key: 9,
+    imageUrl:
+      'https://pbs.twimg.com/profile_images/1729786565327757312/X1DwzOvL_400x400.jpg',
+    name: 'ふるしょう',
+    descriptions: [
+      'Dress Code株式会社 テックリード',
+      '創業期のスタートアップでBtoBアプリケーションの開発に従事。趣味はReact・ゴルフ・競馬です。',
+    ],
+    xUrl: 'https://x.com/k_furusho_',
+  },
+  {
+    key: 10,
+    imageUrl: '/images/members/wonder.png',
+    name: 'Wonder',
+    descriptions: [
+      'Webエンジニアとして、フロントエンド、バックエンド、クラウドインフラなど手広くやってます。フロントエンドでは、Reactを中心に日々技術を深めながら邁進しています。',
+      'シンプル、軽量、小型、ハイパワーをモットーにスリムでぜい肉のないシステムを作るのが好きです。',
+    ],
+    xUrl: 'https://x.com/iwonder118',
+  },
+  {
+    key: 11,
+    imageUrl:
+      'https://pbs.twimg.com/profile_images/1000547925720612865/yWPWzCTL_400x400.jpg',
+    name: 'locol',
+    descriptions: [
+      'Software Engineer',
+      'Reactを用いたフロントエンド開発を中心にバックエンドやインフラ等、幅広い技術領域で開発しています。',
+      'デザインシステム、アーキテクチャ設計、テスト、DevOps、スクラムなどが好きです。React Tokyoには様々なバックグラウンドの方がいらっしゃるので、一緒に切磋琢磨して盛り上げていければと思います！',
+    ],
+    xUrl: 'https://x.com/locol23',
+  },
 ];
