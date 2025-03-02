@@ -9,8 +9,7 @@ export type Profile = {
 export const INITIATOR_PROFILES: Profile[] = [
   {
     key: 0,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1853633897558589440/Nuy9mou5_400x400.jpg',
+    imageUrl: '/images/members/Daishi-Kato.webp',
     name: 'Daishi Kato',
     descriptions: [
       'オープンソース開発者',
@@ -23,8 +22,7 @@ export const INITIATOR_PROFILES: Profile[] = [
   },
   {
     key: 1,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1405036980690247684/A-Q3iOjM_400x400.jpg',
+    imageUrl: '/images/members/Teruhisa-Yamamoto.webp',
     name: 'Teruhisa Yamamoto',
     descriptions: [
       'React中心のフロントエンド開発に従事。クライアント寄りのアプリ開発が好み。現在警備ロボット開発のチームに参画中。React Tokyo',
@@ -37,8 +35,7 @@ export const INITIATOR_PROFILES: Profile[] = [
 export const COLLABORATOR_PROFILES: Profile[] = [
   {
     key: 0,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1883341436617441280/vaE-JwnH_400x400.jpg',
+    imageUrl: '/images/members/Yusuke-Kikuta.webp',
     name: 'Yusuke Kikuta',
     descriptions: [
       'フリーランスフルスタックエンジニア',
@@ -49,8 +46,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 1,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1624662455682215936/d6fJLpgm_400x400.jpg',
+    imageUrl: '/images/members/ytaisei.webp',
     name: 'ytaisei',
     descriptions: [
       'Webフロントエンドエンジニア',
@@ -60,8 +56,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 2,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1077028031074455552/cXJ2nucc_400x400.jpg',
+    imageUrl: '/images/members/SolitudeRA.webp',
     name: 'SolitudeRA',
     descriptions: [
       '情報系修士2年生フルスタックエンジニアを目指しています。',
@@ -71,8 +66,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 3,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1888927761454227456/BLz1aFZm_400x400.jpg',
+    imageUrl: '/images/members/tamu.webp',
     name: 'tamu',
     descriptions: [
       'Webエンジニア',
@@ -84,8 +78,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 4,
-    imageUrl:
-      'https://cdn.discordapp.com/avatars/1240512986360057897/2fa555d5384049e7c8cedab02366d21f.webp?size=240',
+    imageUrl: '/images/members/jack.webp',
     name: 'ジャック',
     descriptions: [
       'フロントエンドエンジニア',
@@ -96,8 +89,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 5,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1635878143579013120/EFedSC6O_400x400.jpg',
+    imageUrl: '/images/members/cordelia.webp',
     name: 'cordelia',
     descriptions: [
       'Web Developer',
@@ -107,8 +99,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 6,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1018548906379001857/MlgEdhSP_400x400.jpg',
+    imageUrl: '/images/members/Ntaka.webp',
     name: 'Ntaka',
     descriptions: [
       'Webエンジニア',
@@ -119,8 +110,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 7,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1591307647617155073/60s_fx_K_400x400.png',
+    imageUrl: '/images/members/akfm_sato.webp',
     name: 'akfm_sato(あっきー)',
     descriptions: [
       'Next.jsの話をよくZennで記事にしています。Rust、テスト、アジャイルが好きです。[「Next.jsの考え方」](https://zenn.dev/akfm/books/nextjs-basic-principle)を執筆。',
@@ -129,7 +119,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 8,
-    imageUrl: 'https://avatars.githubusercontent.com/u/81406938?v=4',
+    imageUrl: '/images/members/jogen.webp',
     name: 'じょうげん',
     descriptions: [
       'Webエンジニア',
@@ -139,8 +129,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 9,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1729786565327757312/X1DwzOvL_400x400.jpg',
+    imageUrl: '/images/members/furusho.webp',
     name: 'ふるしょう',
     descriptions: [
       'Dress Code株式会社 テックリード',
@@ -150,7 +139,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 10,
-    imageUrl: '/images/members/wonder.png',
+    imageUrl: '/images/members/wonder.webp',
     name: 'Wonder',
     descriptions: [
       'Webエンジニアとして、フロントエンド、バックエンド、クラウドインフラなど手広くやってます。フロントエンドでは、Reactを中心に日々技術を深めながら邁進しています。',
@@ -160,8 +149,7 @@ export const COLLABORATOR_PROFILES: Profile[] = [
   },
   {
     key: 11,
-    imageUrl:
-      'https://pbs.twimg.com/profile_images/1000547925720612865/yWPWzCTL_400x400.jpg',
+    imageUrl: '/images/members/locol.webp',
     name: 'locol',
     descriptions: [
       'Software Engineer',
