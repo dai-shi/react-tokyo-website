@@ -12,6 +12,10 @@ const HEADER_MENUS: { path: RouteConfig['paths']; label: string }[] = [
     label: 'About',
   },
   {
+    path: '/blogs',
+    label: 'Blogs',
+  },
+  {
     path: '/members',
     label: 'Members',
   },
