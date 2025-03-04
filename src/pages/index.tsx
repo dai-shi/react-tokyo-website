@@ -1,5 +1,6 @@
 import { JoinDiscordServer } from '../components/joinDiscordServer';
 import { Head } from '../components/head';
+import { Link } from 'waku';
 import { Blogs } from '../components/blogs';
 import { Faq } from '../components/faq';
 import { Descriptions } from '../components/descriptions';
@@ -29,7 +30,12 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-      <Blogs />
+      <div className="space-y-4 lg:space-y-8">
+        <h2 className="text-3xl font-bold">
+          <Link to="/blogs">BLOGS</Link>
+        </h2>
+        <Blogs />
+      </div>
       <Faq />
       <Contact />
     </div>
