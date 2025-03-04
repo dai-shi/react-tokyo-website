@@ -3,8 +3,8 @@ import { Head } from '../components/head';
 import { Link } from 'waku';
 import { Blogs } from '../components/blogs';
 import { Faq } from '../components/faq';
-import { Contact } from '../components/contact/contact';
 import { Descriptions } from '../components/descriptions';
+import { Contact } from '../components/contact/contact';
 
 export default async function HomePage() {
   return (
