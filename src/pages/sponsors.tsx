@@ -291,6 +291,8 @@ export default async function SponsorsPage() {
               <p>
                 イベントは主に都内で開催します。そのイベント毎に、会場や飲食提供に関するスポンサーを募集しています。
                 <br />
+                会場スポンサーと飲食スポンサーはそれぞれ募集しておりますが、もし会場と飲食の両方をご提供いただける場合は大変助かります。可能な場合はその旨合わせてお知らせください。
+                <br />
                 イベントの様子は
                 <a
                   className="underline decoration-sky-500 decoration-2"
