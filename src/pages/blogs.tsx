@@ -2,7 +2,7 @@ import { BlogCounter } from '../components/blogs/blogCounter';
 import { Blogs } from '../components/blogs/blogs';
 import { Head } from '../components/head';
 
-export default async function BlogsPage () {
+export default async function BlogsPage() {
   return (
     <section className="text-gray-900 lg:pt-40">
       <Head title="Blogs - React Tokyo" />
