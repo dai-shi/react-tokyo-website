@@ -1,7 +1,7 @@
 import { JoinDiscordServer } from '../components/joinDiscordServer';
 import { Head } from '../components/head';
 import { Link } from 'waku';
-import { Blogs } from '../components/blogs';
+import { Blogs } from '../components/blogs/blogs';
 import { Faq } from '../components/faq';
 import { Descriptions } from '../components/descriptions';
 import { Contact } from '../components/contact/contact';
