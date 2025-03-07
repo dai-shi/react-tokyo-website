@@ -1,10 +1,11 @@
 import { JoinDiscordServer } from '../components/joinDiscordServer';
 import { Head } from '../components/head';
 import { Link } from 'waku';
-import { Blogs } from '../components/blogs';
+import { Blogs } from '../components/blogs/blogs';
 import { Faq } from '../components/faq';
 import { Descriptions } from '../components/descriptions';
 import { Contact } from '../components/contact/contact';
+import { ViewMoreLink } from '../components/blogs/viewMoreLink';
 
 export default async function HomePage() {
   return (
@@ -35,6 +36,9 @@ export default async function HomePage() {
           <Link to="/blogs">Blogs</Link>
         </h2>
         <Blogs />
+        <div className="mt-8 text-center">
+          <ViewMoreLink />
+        </div>
       </div>
       <Faq />
       <Contact />

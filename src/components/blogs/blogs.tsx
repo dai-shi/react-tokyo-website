@@ -1,4 +1,4 @@
-import { GATHERED_BLOGS } from '../blogs.gen';
+import { GATHERED_BLOGS } from '../../blogs.gen';
 
 export const Blogs = () => {
   return (
