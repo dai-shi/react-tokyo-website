@@ -7,7 +7,7 @@ export default async function BlogsPage() {
       <Head title="Blogs - React Tokyo" />
       <div className="mx-auto max-w-[1300px]">
         <div className="space-y-4 lg:space-y-8">
-          <h1 className="text-3xl font-bold">BLOGS</h1>
+          <h1 className="text-3xl font-bold">Blogs</h1>
           <div className="space-y-4 lg:text-lg">
             <p>イベントレポートやZennのpublicationブログなど</p>
           </div>

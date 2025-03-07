@@ -32,7 +32,7 @@ export default async function HomePage() {
       </div>
       <div className="space-y-4 lg:space-y-8">
         <h2 className="text-3xl font-bold">
-          <Link to="/blogs">BLOGS</Link>
+          <Link to="/blogs">Blogs</Link>
         </h2>
         <Blogs />
       </div>
