@@ -1,4 +1,4 @@
-import { Blogs } from '../components/blogs';
+import { Blogs } from '../components/blogs/blogs';
 import { Head } from '../components/head';
 
 export default async function BlogsPage() {
