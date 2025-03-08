@@ -1,5 +1,5 @@
 import { Blogs } from '../components/blogs/blogs';
-import { Head } from '../components/head';
+import { Head } from '../components/head/head';
 
 export default async function BlogsPage() {
   return (
