@@ -1,4 +1,4 @@
-import { Head } from '../components/head/head';
+import { Head } from '../components/head';
 import { Card } from '../components/members/card';
 import {
   INITIATOR_PROFILES,

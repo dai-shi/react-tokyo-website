@@ -1,5 +1,3 @@
-import { GoogleAnalytics } from './google-analytics';
-
 type MetaData = {
   title: string;
   description: string;
@@ -31,7 +29,6 @@ export const Head = (metaProps: Partial<MetaData>) => {
   };
   return (
     <>
-      <GoogleAnalytics />
       <title>{meta.title}</title>
       <meta name="description" content={meta.description} />
       <link rel="icon" type="image/png" href={meta.icon} />

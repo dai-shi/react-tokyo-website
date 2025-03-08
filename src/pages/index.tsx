@@ -1,5 +1,5 @@
 import { JoinDiscordServer } from '../components/joinDiscordServer';
-import { Head } from '../components/head/head';
+import { Head } from '../components/head';
 import { Link } from 'waku';
 import { Blogs } from '../components/blogs/blogs';
 import { Faq } from '../components/faq';
