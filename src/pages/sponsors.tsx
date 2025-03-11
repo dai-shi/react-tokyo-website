@@ -7,6 +7,20 @@ import {
 
 import { ContactForm } from '../components/contact/contactForm';
 
+type Sponsor = {
+  label: string;
+  src: string;
+  url: string;
+};
+
+export const goldSponsors: Sponsor[] = [
+  {
+    label: '株式会社キッカケクリエイション',
+    src: '/images/sponsors/kikkakecreation.png',
+    url: 'https://kikkakecreation.com/',
+  },
+];
+
 export default async function SponsorsPage() {
   return (
     <section className="max-w-6xl space-y-18 pt-10 text-gray-900 md:space-y-24 lg:pt-40">
@@ -39,11 +53,16 @@ export default async function SponsorsPage() {
               <div className="ml-4 flex-grow border-t border-yellow-500" />
             </div>
             <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <img
-                className="blur-xs"
-                src="/images/react-tokyo-logo-opg.png"
-                alt="Sample"
-              />
+              {goldSponsors.map((sponsor) => (
+                <a
+                  key={sponsor.label}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={sponsor.src} alt={sponsor.label} />
+                </a>
+              ))}
             </div>
           </div>
 
