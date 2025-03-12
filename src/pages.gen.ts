@@ -14,7 +14,9 @@ import type { getConfig as Index_getConfig } from './pages/index';
 // prettier-ignore
 import type { getConfig as Members_getConfig } from './pages/members';
 // prettier-ignore
-import type { getConfig as Sponsors_getConfig } from './pages/sponsors';
+import type { getConfig as SponsorsHistory_getConfig } from './pages/sponsors/history';
+// prettier-ignore
+import type { getConfig as SponsorsIndex_getConfig } from './pages/sponsors/index';
 
 // prettier-ignore
 type Page =
@@ -23,7 +25,8 @@ type Page =
 | ({ path: '/code-of-conduct' } & GetConfigResponse<typeof CodeOfConduct_getConfig>)
 | ({ path: '/' } & GetConfigResponse<typeof Index_getConfig>)
 | ({ path: '/members' } & GetConfigResponse<typeof Members_getConfig>)
-| ({ path: '/sponsors' } & GetConfigResponse<typeof Sponsors_getConfig>);
+| ({ path: '/sponsors/history' } & GetConfigResponse<typeof SponsorsHistory_getConfig>)
+| ({ path: '/sponsors' } & GetConfigResponse<typeof SponsorsIndex_getConfig>);
 
 // prettier-ignore
 declare module 'waku/router' {

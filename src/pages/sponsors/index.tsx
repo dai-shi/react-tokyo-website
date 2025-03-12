@@ -3,9 +3,11 @@ import {
   HeartHandshake,
   TrendingUp,
   ChartNoAxesCombined,
+  ChevronRight,
 } from 'lucide-react';
 
-import { ContactForm } from '../components/contact/contactForm';
+import { ContactForm } from '../../components/contact/contactForm';
+import { Link } from 'waku';
 
 type Sponsor = {
   label: string;
@@ -97,6 +99,16 @@ export default async function SponsorsPage() {
               />
             </div>
           </div>
+
+          <Link
+            to="/sponsors/history"
+            className="m-auto flex w-fit items-center justify-center text-sm text-blue-500 md:text-lg"
+          >
+            これまでご支援頂いたスポンサーはこちら
+            <span className="mb-0.5 size-4 md:size-5">
+              <ChevronRight className="size-full" />
+            </span>
+          </Link>
         </div>
       </div>
 
