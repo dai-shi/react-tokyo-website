@@ -1,11 +1,11 @@
-import { JoinDiscordServer } from '../components/joinDiscordServer';
+import { JoinDiscordServer } from '../components/join-discord-server';
 import { Head } from '../components/head';
 import { Link } from 'waku';
 import { Blogs } from '../components/blogs/blogs';
 import { Faq } from '../components/faq';
 import { Descriptions } from '../components/descriptions';
 import { Contact } from '../components/contact/contact';
-import { ViewMoreLink } from '../components/blogs/viewMoreLink';
+import { ViewMoreLink } from '../components/blogs/view-more-link';
 
 export default async function HomePage() {
   return (

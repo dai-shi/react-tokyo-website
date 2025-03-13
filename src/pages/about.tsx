@@ -1,7 +1,7 @@
 import { Head } from '../components/head';
 import { Descriptions } from '../components/descriptions';
-import { OnlineExchange } from '../components/onlineExchange';
-import { EventOfflineExchange } from '../components/eventOfflineExchange';
+import { OnlineExchange } from '../components/online-exchange';
+import { EventOfflineExchange } from '../components/event-offline-exchange';
 
 export default async function AboutPage() {
   return (

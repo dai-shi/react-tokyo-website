@@ -1,7 +1,7 @@
 'use client';
 
 import { Link } from 'waku';
-import { JoinDiscordServer } from './joinDiscordServer';
+import { JoinDiscordServer } from './join-discord-server';
 import { RouteConfig } from 'waku/router';
 import { useEffect, useState, useTransition } from 'react';
 import { clsx } from 'clsx';

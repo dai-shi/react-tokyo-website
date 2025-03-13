@@ -2,8 +2,8 @@
 
 import { useActionState } from 'react';
 import { ActionResponse } from './types';
-import { postContent } from './postContent';
-import { renderTextContents } from '../lib/renderTextContents';
+import { postContent } from './post-content';
+import { renderTextContents } from '../lib/render-text-contents';
 
 const initialState: ActionResponse = {
   success: false,

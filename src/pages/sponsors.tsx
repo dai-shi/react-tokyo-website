@@ -5,7 +5,7 @@ import {
   ChartNoAxesCombined,
 } from 'lucide-react';
 
-import { ContactForm } from '../components/contact/contactForm';
+import { ContactForm } from '../components/contact/contact-form';
 
 type Sponsor = {
   label: string;
