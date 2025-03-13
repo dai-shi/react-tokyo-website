@@ -1,6 +1,9 @@
+import { Head } from '../components/head';
+
 export default async function CodeOfConductPage() {
   return (
     <div className="mx-auto max-w-3xl text-gray-900 lg:pt-40">
+      <Head title="行動規範 - React Tokyo" />
       <h1 className="py-8 text-2xl font-bold tracking-tight break-keep lg:py-14 lg:text-4xl">
         行動規範 (Code of Conduct)
       </h1>
