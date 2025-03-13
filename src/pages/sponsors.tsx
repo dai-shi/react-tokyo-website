@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 
 import { ContactForm } from '../components/contact/contact-form';
+import { Head } from '../components/head';
 
 type Sponsor = {
   label: string;
@@ -24,6 +25,7 @@ export const goldSponsors: Sponsor[] = [
 export default async function SponsorsPage() {
   return (
     <section className="max-w-6xl space-y-18 pt-10 text-gray-900 md:space-y-24 lg:pt-40">
+      <Head title="Sponsors - React Tokyo" />
       <div className="space-y-8">
         <h1 className="text-3xl font-bold tracking-tight break-all lg:mb-12 lg:text-5xl">
           React Tokyoとともに、学び合い・つながる場を。
