@@ -3,7 +3,7 @@ import { Card } from '../components/members/card';
 import {
   INITIATOR_PROFILES,
   COLLABORATOR_PROFILES,
-} from '../components/members/memberProfiles';
+} from '../components/members/member-profiles';
 
 export default async function MembersPage() {
   return (
