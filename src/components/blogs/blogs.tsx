@@ -8,7 +8,7 @@ type BlogsProps = {
 
 export const Blogs = ({ displayLimit = GATHERED_BLOGS.length }: BlogsProps) => {
   return (
-    <ul className="grid grid-cols-1 place-items-stretch justify-items-center gap-4 md:grid-cols-2">
+    <ul className="m-auto grid w-fit grid-cols-1 place-items-stretch justify-items-center gap-4 md:grid-cols-2">
       {GATHERED_BLOGS.slice(0, displayLimit).map((blog) => (
         <li key={blog.url} className="max-w-lg">
           <a href={blog.url} target="_blank" rel="noreferrer">
