@@ -1,7 +1,7 @@
 import { JoinDiscordServer } from '../components/join-discord-server';
 import { Head } from '../components/head';
 import { Link } from 'waku';
-import { Blogs } from '../components/blogs/blogs';
+import { Blogs, DISPLAY_BLOGS_LIMIT } from '../components/blogs/blogs';
 import { Faq } from '../components/faq';
 import { Descriptions } from '../components/descriptions';
 import { Contact } from '../components/contact/contact';
@@ -35,7 +35,7 @@ export default async function HomePage() {
         <h2 className="text-3xl font-bold">
           <Link to="/blogs">Blogs</Link>
         </h2>
-        <Blogs />
+        <Blogs displayLimit={DISPLAY_BLOGS_LIMIT} />
         <div className="mt-8 text-center">
           <ViewMoreLink />
         </div>
