@@ -1,5 +1,5 @@
-import { renderTextContents } from '../lib/renderTextContents';
-import { type Profile } from './memberProfiles';
+import { renderTextContents } from '../lib/render-text-contents';
+import { type Profile } from './member-profiles';
 
 /**
  * MembersページのカードUI

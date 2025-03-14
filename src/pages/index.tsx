@@ -1,9 +1,11 @@
-import { JoinDiscordServer } from '../components/joinDiscordServer';
+import { JoinDiscordServer } from '../components/join-discord-server';
 import { Head } from '../components/head';
-import { Blogs } from '../components/blogs';
+import { Link } from 'waku';
+import { Blogs, DISPLAY_BLOGS_LIMIT } from '../components/blogs/blogs';
 import { Faq } from '../components/faq';
 import { Descriptions } from '../components/descriptions';
 import { Contact } from '../components/contact/contact';
+import { ViewMoreLink } from '../components/blogs/view-more-link';
 
 export default async function HomePage() {
   return (
@@ -29,7 +31,15 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-      <Blogs />
+      <div className="space-y-4 lg:space-y-8">
+        <h2 className="text-3xl font-bold">
+          <Link to="/blogs">Blogs</Link>
+        </h2>
+        <Blogs displayLimit={DISPLAY_BLOGS_LIMIT} />
+        <div className="mt-8 text-center">
+          <ViewMoreLink />
+        </div>
+      </div>
       <Faq />
       <Contact />
     </div>

@@ -4,9 +4,9 @@
 import type { PathsForPages, GetConfigResponse } from 'waku/router';
 
 // prettier-ignore
-import type { getConfig as Root_getConfig } from './pages/_root';
-// prettier-ignore
 import type { getConfig as About_getConfig } from './pages/about';
+// prettier-ignore
+import type { getConfig as Blogs_getConfig } from './pages/blogs';
 // prettier-ignore
 import type { getConfig as CodeOfConduct_getConfig } from './pages/code-of-conduct';
 // prettier-ignore
@@ -18,8 +18,8 @@ import type { getConfig as Sponsors_getConfig } from './pages/sponsors';
 
 // prettier-ignore
 type Page =
-| ({ path: '/_root' } & GetConfigResponse<typeof Root_getConfig>)
 | ({ path: '/about' } & GetConfigResponse<typeof About_getConfig>)
+| ({ path: '/blogs' } & GetConfigResponse<typeof Blogs_getConfig>)
 | ({ path: '/code-of-conduct' } & GetConfigResponse<typeof CodeOfConduct_getConfig>)
 | ({ path: '/' } & GetConfigResponse<typeof Index_getConfig>)
 | ({ path: '/members' } & GetConfigResponse<typeof Members_getConfig>)

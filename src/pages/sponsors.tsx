@@ -5,11 +5,27 @@ import {
   ChartNoAxesCombined,
 } from 'lucide-react';
 
-import { ContactForm } from '../components/contact/contactForm';
+import { ContactForm } from '../components/contact/contact-form';
+import { Head } from '../components/head';
+
+type Sponsor = {
+  label: string;
+  src: string;
+  url: string;
+};
+
+export const goldSponsors: Sponsor[] = [
+  {
+    label: '株式会社キッカケクリエイション',
+    src: '/images/sponsors/kikkakecreation.png',
+    url: 'https://kikkakecreation.com/',
+  },
+];
 
 export default async function SponsorsPage() {
   return (
     <section className="max-w-6xl space-y-18 pt-10 text-gray-900 md:space-y-24 lg:pt-40">
+      <Head title="Sponsors - React Tokyo" />
       <div className="space-y-8">
         <h1 className="text-3xl font-bold tracking-tight break-all lg:mb-12 lg:text-5xl">
           React Tokyoとともに、学び合い・つながる場を。
@@ -39,11 +55,16 @@ export default async function SponsorsPage() {
               <div className="ml-4 flex-grow border-t border-yellow-500" />
             </div>
             <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <img
-                className="blur-xs"
-                src="/images/react-tokyo-logo-opg.png"
-                alt="Sample"
-              />
+              {goldSponsors.map((sponsor) => (
+                <a
+                  key={sponsor.label}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={sponsor.src} alt={sponsor.label} />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -290,6 +311,8 @@ export default async function SponsorsPage() {
               </h5>
               <p>
                 イベントは主に都内で開催します。そのイベント毎に、会場や飲食提供に関するスポンサーを募集しています。
+                <br />
+                会場スポンサーと飲食スポンサーはそれぞれ募集しておりますが、もし会場と飲食の両方をご提供いただける場合は大変助かります。可能な場合はその旨合わせてお知らせください。
                 <br />
                 イベントの様子は
                 <a

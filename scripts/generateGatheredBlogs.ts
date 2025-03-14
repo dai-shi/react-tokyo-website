@@ -3,7 +3,16 @@ import ogs from 'open-graph-scraper';
 import prettier from 'prettier';
 
 const list = [
-  // 'https://zenn.dev/react_tokyo/articles/38a76f948c0d2f',
+  'https://zenn.dev/react_tokyo/articles/04d1af4b4a3abc',
+  'https://zenn.dev/react_tokyo/articles/f590adb2345c67',
+  'https://zenn.dev/react_tokyo/articles/fa97b98a527439',
+  'https://zenn.dev/react_tokyo/articles/77375d84125b76',
+  'https://zenn.dev/react_tokyo/articles/e487712a1629d7',
+  'https://zenn.dev/react_tokyo/articles/db90a5397364aa',
+  'https://zenn.dev/react_tokyo/articles/6aaea6220a2c3e',
+  'https://zenn.dev/react_tokyo/articles/37d79b1b2a7487',
+  'https://zenn.dev/react_tokyo/articles/ba82415acc2c04',
+  'https://zenn.dev/react_tokyo/articles/38a76f948c0d2f',
   'https://zenn.dev/tell_y/articles/f013a03370ee27',
   'https://zenn.dev/dai_shi/articles/9f2760086fb31a',
 ];
