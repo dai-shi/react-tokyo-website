@@ -158,4 +158,15 @@ export const COLLABORATOR_PROFILES: Profile[] = [
     ],
     xUrl: 'https://x.com/locol23',
   },
+  {
+    key: 12,
+    imageUrl: '/images/members/shirakaba.webp',
+    name: 'shirakaba',
+    descriptions: [
+      'エンジニア',
+      'OSSの活動の中心はほとんどReact Native（例えば react-native-macos、react-native-windows、Node-APIとNativeScriptへの対応）に関しますが、心はWebエンジニアです。',
+      'React Tokyoでもっと開発者コミュニティーにとつながりたいです。よろしくお願いします！'
+    ],
+    xUrl: 'https://x.com/birch_js',
+  },
 ];
